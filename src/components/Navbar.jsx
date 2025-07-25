@@ -16,17 +16,25 @@ const Navbar = () => {
     }, []);
     
   return (
-    <div className='nav absolute z-100 w-[50%] h-15 flex flex-row items-center justify-center gap-10 top-10'>
-        <div className='bg-black/30 backdrop-blur-lg w-[30%] h-full rounded-full inset-shadow-sm inset-shadow-white/30 flex flex-row items-center justify-between px-10 gap-3'>
-        <a className='word text-white text-sm' href="">ABOUT</a>
-        <a className='word text-white text-sm' href="">WORK</a>
-        </div>
-        <h2 className='text-white'>logo</h2>
-        <div className='bg-black/30 backdrop-blur-lg w-[30%] h-full rounded-full inset-shadow-sm inset-shadow-white/30 flex flex-row items-center justify-between px-10 gap-3'>
-        <a className='word text-white text-sm' href="">SERVICES</a>
-        <a className='word text-white text-sm' href="">CONTACT</a>
-        </div>
-    </div>
+    <div className='nav absolute z-50 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[45px] sm:h-[50px] md:h-[60px] flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-10 top-4 sm:top-6 md:top-10'>
+
+  {/* Left menu */}
+  <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
+    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">ABOUT</a>
+    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">WORK</a>
+  </div>
+
+  {/* Logo */}
+  <h2 className='text-white text-[12px] sm:text-sm md:text-base'>logo</h2>
+
+  {/* Right menu */}
+  <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
+    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">SERVICES</a>
+    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">CONTACT</a>
+  </div>
+</div>
+
+
   )
 }
 
