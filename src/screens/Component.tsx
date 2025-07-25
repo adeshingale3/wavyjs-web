@@ -24,14 +24,14 @@ const Component = () => {
     };
 
     return (
-        <div className='h-screen w-screen bg-black p-5'>
+        <div className='h-screen w-screen bg-black p-5 overflow-auto scrollbar-hidden'>
 
             {/* Top bar where all component names will be listed */}
             <div className='w-full relative z-10 flex flex-row items-center'>
                 <div className='h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] bg-red-500 absolute flex items-center justify-center '>
                     logo
                 </div>
-                <div className='w-screen flex flex-row flex-nowrap items-center gap-6 sm:gap-10 md:gap-20 p-2 sm:p-4 md:p-5 ml-16 sm:ml-22 md:ml-28 overflow-x-auto scrollbar-hidden'>
+                <div className='w-screen flex flex-row flex-nowrap items-center gap-1 sm:gap-2 md:gap-12 p-2 sm:p-4 md:p-5 ml-16 sm:ml-22 md:ml-28 overflow-x-auto scrollbar-hidden'>
                     {tabs.map((tab, i) => (
                         <button
                             key={i}
