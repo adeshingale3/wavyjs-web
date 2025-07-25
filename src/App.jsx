@@ -1,12 +1,13 @@
 import React from 'react'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import Component from './screens/Component'
+// import Navbar from './components/Navbar'
+// import Hero from './screens/Hero'
 
 const App = () => {
   return (
     <div className='flex justify-center bg-[#0A0A0A]'>
-      <Navbar />
-      <Hero />
+      <Component />
+      {/* <Hero /> */}
     </div>
   )
 }

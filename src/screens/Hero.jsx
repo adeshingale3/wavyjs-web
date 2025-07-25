@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect} from 'react'
 import SplitType from 'split-type'
+import Navbar from '../components/Navbar'
 const Hero = () => {
 
     useEffect(() => {
@@ -64,7 +65,9 @@ const Hero = () => {
 
 
     return (
-        <div className='font-Poppins h-screen w-screen bg-black flex items-center justify-center relative overflow-hidden'>
+        <>
+            <Navbar />
+            <div className='font-Poppins h-screen w-screen bg-black flex items-center justify-center relative overflow-hidden'>
             {/* LT Line */}
             <div className='absolute h-[0.2%] w-[25%] bg-gradient-to-r from-black to-gray-500 top-50 left-0 rounded-full flex items-center'>
                 <h3 className='small-title absolute text-gray-400 text-[10px] ml-20 font-bold'>BUTTONS</h3>
@@ -106,10 +109,10 @@ const Hero = () => {
             </div>
 
             <div className='buttons absolute bottom-30 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
-                <button className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
+                <button className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
                     Components
                 </button>
-                <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
+                <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
                     Github
                 </button>
             </div>
@@ -120,6 +123,7 @@ const Hero = () => {
 
 
         </div>
+        </>
 
     )
 }
