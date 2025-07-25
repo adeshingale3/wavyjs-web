@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center bg-[#0A0A0A]'>
       <Navbar />
       <Hero />
     </div>

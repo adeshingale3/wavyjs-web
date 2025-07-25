@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import SplitType from 'split-type'
 const Hero = () => {
 
@@ -18,6 +18,10 @@ const Hero = () => {
             ease: "power3.out",
             stagger: 0.2,
         });
+
+        
+
+    
     }, []);
     useGSAP(() => {
         const screenWidth = window.innerWidth;
@@ -50,7 +54,7 @@ const Hero = () => {
 
         gsap.fromTo(
             '.buttons',
-            { y:100,  opacity: 0 },
+            { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 2.5, delay: 0.5, ease: 'power2.out' }
         );
 
@@ -93,22 +97,26 @@ const Hero = () => {
                 <h3 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] mb-[10px] sm:mb-[12px] md:mb-[14px] lg:mb-[16px]  text-white font-semibold text-center bg-white/20 backdrop-blur-lg rounded-full py-1 px-4 shadow-inner shadow-white/20'>
                     The foundation of your Design System
                 </h3>
-                <h1 className=' text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] xl:text-[150px] font-bold text-white text-center leading-none'>
+                <h1 className=' text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[130px] font-bold text-white text-center leading-none'>
                     WAVY JS
                 </h1>
-                <h2 className='text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-center text-white'>
+                <h2 className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center text-white mt-4'>
                     A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code.
                 </h2>
             </div>
 
-            <div className='buttons absolute bottom-20 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
-  <button className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
-    Components
-  </button>
-  <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
-    Github
-  </button>
-</div>
+            <div className='buttons absolute bottom-30 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
+                <button className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
+                    Components
+                </button>
+                <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20'>
+                    Github
+                </button>
+            </div>
+
+           
+
+            
 
 
         </div>
