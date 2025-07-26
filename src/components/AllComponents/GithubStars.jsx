@@ -8,7 +8,7 @@ const GitHubStars = () => {
   return (
     <button
       {...hoverProps}
-      className={`min-w-[80px] sm:min-w-[100px] px-3 py-2 sm:px-4 sm:py-2 flex items-center justify-between rounded-3xl border border-white bg-black transition-colors duration-300 ease-in-out ${
+      className={`cursor-pointer min-w-[80px] sm:min-w-[100px] px-3 py-2 sm:px-4 sm:py-2 flex items-center justify-between rounded-3xl border border-white bg-black transition-colors duration-300 ease-in-out ${
         isHovered ? 'bg-white' : 'bg-black'
       }`}
     >
