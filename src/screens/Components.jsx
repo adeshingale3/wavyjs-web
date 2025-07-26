@@ -40,8 +40,8 @@ const Components = () => {
 
             {/* Top bar where all component names will be listed */}
             <div className='nav w-full relative z-10 flex flex-row items-center'>
-                <Link to="/" className='h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] bg-red-500 absolute flex items-center justify-center '>
-                    logo
+                <Link to="/" className='h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] absolute flex items-center justify-center '>
+                    <img src='/wavy logo.png'/>
                 </Link>
                 <div className=' w-screen flex flex-row flex-nowrap items-center gap-1 sm:gap-2 md:gap-12 p-2 sm:p-4 md:p-5 ml-16 sm:ml-22 md:ml-28 overflow-x-auto scrollbar-hidden'>
                     {tabs.map((tab, i) => (
