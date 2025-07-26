@@ -60,7 +60,7 @@ const Components = () => {
                 </div>
             </div>
 
-            <div className="mt-5 info">
+            <div className="mt-5 info scrollbar-hidden">
                 {renderTabContent()}
             </div>
         </div>
