@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   useEffect(() => {
@@ -20,8 +21,8 @@ const Navbar = () => {
 
   {/* Left menu */}
   <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
-    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">ABOUT</a>
-    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">WORK</a>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="/components">Components</Link>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">WORK</Link>
   </div>
 
   {/* Logo */}
@@ -29,8 +30,8 @@ const Navbar = () => {
 
   {/* Right menu */}
   <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
-    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">SERVICES</a>
-    <a className='word text-white text-[10px] sm:text-xs md:text-sm' href="">CONTACT</a>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">SERVICES</Link>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">CONTACT</Link>
   </div>
 </div>
 

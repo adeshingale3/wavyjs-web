@@ -80,17 +80,17 @@ export default GitHubStars;`}
         <h3 className="text-sm sm:text-lg text-white/50">
           Install the required dependencies
         </h3>
-        <h4 className="text-xs sm:text-base text-white/70 font-semibold mt-6 sm:mt-10 p-2 sm:p-5">
+        <h4 className="text-xs sm:text-base text-white/70 font-semibold mt-2 sm:mt-6 p-2 sm:p-5">
           Paste the below command in your terminal
         </h4>
-        <div className="w-[95%] border border-white/20 bg-white/5 text-white/90 rounded-lg px-3 py-2 sm:px-5 sm:py-4 mt-3 sm:mt-5 font-mono text-xs sm:text-sm">
+        <div className="w-[95%] border border-white/20 bg-white/5 text-white/90 rounded-lg px-3 py-2 sm:px-5 sm:py-4 mt-1 sm:mt-3 font-mono text-xs sm:text-sm">
           npm i lucide-react wavyjs
         </div>
-        <h4 className="text-xs sm:text-base text-white/70 font-semibold mt-6 sm:mt-10 p-2 sm:p-5">
+        <h4 className="text-xs sm:text-base text-white/70 font-semibold mt-2 sm:mt-6 p-2 sm:p-5">
           Paste below code in your component
         </h4>
-        <div className="w-full h-full">
-          <h2 className="text-lg sm:text-xl font-semibold mb-3">Code Snippet</h2>
+        <div className="w-full h-[350px] sm:h-[400px] md:h-[500px]">
+          
           <pre className="bg-black/30 p-2 sm:p-3 rounded-md text-xs sm:text-sm font-mono overflow-auto whitespace-pre-wrap break-words text-white border border-white/20">
             {String.raw`import { Github } from 'lucide-react';
 import React from 'react';

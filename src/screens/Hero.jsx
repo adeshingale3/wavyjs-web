@@ -65,7 +65,7 @@ const Hero = () => {
 
 
     return (
-        <>
+        <div className='h-screen w-screen flex justify-center'>
             <Navbar />
             <div className='font-Poppins h-screen w-screen bg-black flex items-center justify-center relative overflow-hidden'>
             {/* LT Line */}
@@ -123,7 +123,7 @@ const Hero = () => {
 
 
         </div>
-        </>
+        </div>
 
     )
 }
