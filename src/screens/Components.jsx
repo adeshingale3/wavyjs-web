@@ -4,23 +4,26 @@ import CardInfo from '../components/CardInfo';
 import CursorInfo from '../components/CursorInfo';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 // import ButtonInfo from './ButtonInfo';
 
 
 const Components = () => {
-    const tabs = ['Buttons', 'Cards', 'Cursor', 'Buttons', 'Cards', 'Cursor', 'Buttons', 'Cards', 'Cursor', 'Buttons', 'Cards', 'Cursor'];
+    const tabs = ['Buttons', 'Cards', 'Cursor'];
     const [activeTab, setActiveTab] = useState('Buttons');
     useEffect(() => {
         gsap.fromTo(".nav", 
           {y:-100},
           {y:0, duration: 2}
-        ),
+        )
+    }, []);
+    useGSAP(()=>{
         gsap.fromTo(
             ".info",
             { x: 100, opacity: 0 },
             { x: 0, opacity: 1, duration: 2.5, delay: 0.5, ease: 'power2.out' }
         );
-    }, []);
+    })
     // This function returns the correct component based on the active tab
     const renderTabContent = () => {
         switch (activeTab) {
