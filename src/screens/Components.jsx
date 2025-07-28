@@ -5,11 +5,12 @@ import CursorInfo from '../components/CursorInfo';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import MusicBarsInfo from '../components/MusicBarsInfo';
 // import ButtonInfo from './ButtonInfo';
 
 
 const Components = () => {
-    const tabs = ['Buttons', 'Cards'];
+    const tabs = ['Buttons', 'Cards', 'Music Bars'];
     const [activeTab, setActiveTab] = useState('Buttons');
     useEffect(() => {
         gsap.fromTo(".nav", 
@@ -33,6 +34,8 @@ const Components = () => {
                 return <CardInfo />;
             case 'Cursor':
                 return <CursorInfo />;
+                case 'Music Bars':
+                return <MusicBarsInfo />;
             default:
                 return <ButtonsInfo />;
         }
