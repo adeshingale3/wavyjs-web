@@ -46,7 +46,7 @@ const CardInfo = () => {
           {/* Conditional Content */}
           <div className="w-[95%] h-[350px] sm:h-[400px] md:h-[500px] mt-5 text-white border border-white/20 rounded-xl p-3 sm:p-4 md:p-5 flex flex-col">
             {activeTab === 'preview' ? (
-              <div className="h-[350px] w-full flex items-center justify-center mt-10 scale-105 sm:scale-110">
+              <div className="h-[350px] w-full flex items-center justify-center mt-1 sm:mt-2 md:mt-4 lg:mt-6 scale-105 sm:scale-110">
                 <card.component />
               </div>
             ) : (

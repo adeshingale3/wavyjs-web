@@ -9,7 +9,7 @@ import { useGSAP } from '@gsap/react';
 
 
 const Components = () => {
-    const tabs = ['Buttons', 'Cards', 'Cursor'];
+    const tabs = ['Buttons', 'Cards'];
     const [activeTab, setActiveTab] = useState('Buttons');
     useEffect(() => {
         gsap.fromTo(".nav", 
