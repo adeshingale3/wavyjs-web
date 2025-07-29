@@ -1,7 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Component from './screens/Components'
-// import Navbar from './components/Navbar'
 
 import Hero from './screens/Hero'
 import ButtonsInfo from './components/ButtonsInfo'
@@ -12,11 +10,12 @@ import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   return (
     <Router>
+      <Analytics/>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/buttonsinfo" element={<ButtonsInfo />} />
         <Route path="/components" element={<Components />} />
-        <Analytics/>
+        
       </Routes>
     </Router>
   )
