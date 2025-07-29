@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import MusicBarsInfo from '../components/MusicBarsInfo';
+import CheckBoxInfo from '../components/CheckBoxInfo';
 // import ButtonInfo from './ButtonInfo';
 
 
 const Components = () => {
-    const tabs = ['Buttons', 'Cards', 'Music Bars'];
+    const tabs = ['Buttons', 'Cards', 'Music Bars', 'CheckBox'];
     const [activeTab, setActiveTab] = useState('Buttons');
     useEffect(() => {
         gsap.fromTo(".nav", 
@@ -34,8 +35,10 @@ const Components = () => {
                 return <CardInfo />;
             case 'Cursor':
                 return <CursorInfo />;
-                case 'Music Bars':
+            case 'Music Bars':
                 return <MusicBarsInfo />;
+            case 'CheckBox':
+                return <CheckBoxInfo />;
             default:
                 return <ButtonsInfo />;
         }
