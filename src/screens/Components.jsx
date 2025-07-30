@@ -12,7 +12,7 @@ import CheckBoxInfo from '../components/CheckBoxInfo';
 
 const Components = () => {
     const tabs = ['Buttons', 'Cards', 'Music Bars', 'CheckBox'];
-    const [activeTab, setActiveTab] = useState('Buttons');
+    const [activeTab, setActiveTab] = useState(tabs);
     useEffect(() => {
         gsap.fromTo(".nav", 
           {y:-100},
