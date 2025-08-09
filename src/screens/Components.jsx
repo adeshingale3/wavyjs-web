@@ -4,14 +4,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Sidebar from '../components/Sidebar';
+import Information from '../components/Information';
 // import ButtonInfo from './ButtonInfo';
 
 
 
 const Components = () => {
     const navigate = useNavigate();
-    const tabs = ['Buttons'];
-    const [activeTab, setActiveTab] = useState('Buttons');
+    const tabs = ['Button'];
+    const [activeTab, setActiveTab] = useState('Information');
     useEffect(() => {
         gsap.fromTo(".nav", 
           {y:-100},
@@ -28,10 +29,10 @@ const Components = () => {
     // This function returns the correct component based on the active tab
     const renderTabContent = () => {
         switch (activeTab) {
-            case 'Buttons':
-                return <ButtonsInfo />;
+            case 'Informtaion':
+                return <Information />;
             default:
-                return <ButtonsInfo />;
+                return <Information />;
         }
     };
 
@@ -47,7 +48,7 @@ const Components = () => {
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
                 <div><Sidebar /></div>
-                <div className='w-full h-screen'>{renderTabContent()}</div>
+                <div className='w-full h-screen mt-5'>{renderTabContent()}</div>
             </div>
         </div>
     );
