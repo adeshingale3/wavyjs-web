@@ -7,6 +7,7 @@ import Components from './screens/Components';
 import { Analytics } from "@vercel/analytics/react"
 
 
+
 const App = () => {
   return (
     <Router>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/buttonsinfo" element={<ButtonsInfo />} />
         <Route path="/components" element={<Components />} />
+     
         
       </Routes>
     </Router>
