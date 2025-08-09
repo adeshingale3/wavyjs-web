@@ -22,7 +22,7 @@ const Navbar = () => {
   {/* Left menu */}
   <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
     <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="/components">Components</Link>
-    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">WORK</Link>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">Docs</Link>
   </div>
 
   {/* Logo */}
@@ -42,9 +42,9 @@ const Navbar = () => {
 
 
   {/* Right menu */}
-  <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
-    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">SERVICES</Link>
-    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">CONTACT</Link>
+  <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-4 sm:px-5 md:px-7 gap-1 sm:gap-2'>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">Visit X</Link>
+    <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="">GitHub</Link>
   </div>
 </div>
 
