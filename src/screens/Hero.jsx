@@ -3,8 +3,9 @@ import gsap from 'gsap'
 import React, { useEffect} from 'react'
 import SplitType from 'split-type'
 import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
 const Hero = () => {
-
+    const navigate = useNavigate();
     useEffect(() => {
         const split = new SplitType(".title", {
             types: "lines",
@@ -109,11 +110,11 @@ const Hero = () => {
             </div>
 
             <div className='buttons absolute bottom-30 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
-                <button className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
+                <button onClick={()=>navigate('/components')} className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
                     Components
                 </button>
                 <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
-                    Github
+                    Visit X
                 </button>
             </div>
 
