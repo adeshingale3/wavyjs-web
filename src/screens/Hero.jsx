@@ -4,8 +4,10 @@ import React, { useEffect} from 'react'
 import SplitType from 'split-type'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
 const Hero = () => {
     const navigate = useNavigate();
+  const notify = () => toast("Coming Soon !");
     useEffect(() => {
         const split = new SplitType(".title", {
             types: "lines",
@@ -66,8 +68,12 @@ const Hero = () => {
 
 
     return (
-        <div className='h-screen w-screen flex justify-center'>
+        <>
+        
+            <div className='h-screen w-screen flex justify-center'>
+                
             <Navbar />
+            
             <div className='font-Poppins h-screen w-screen bg-black flex items-center justify-center relative overflow-hidden'>
             {/* LT Line */}
             <div className='absolute h-[0.2%] w-[25%] bg-gradient-to-r from-black to-gray-500 top-50 left-0 rounded-full flex items-center'>
@@ -110,13 +116,14 @@ const Hero = () => {
             </div>
 
             <div className='buttons absolute bottom-30 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
-                <button onClick={()=>navigate('/components')} className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
+                <button onClick={notify} className='h-full w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
                     Components
                 </button>
-                <button className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
+                <button onClick={notify} className='h-full w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer'>
                     Visit X
                 </button>
             </div>
+            <ToastContainer />
 
            
 
@@ -125,6 +132,7 @@ const Hero = () => {
 
         </div>
         </div>
+        </>
 
     )
 }
