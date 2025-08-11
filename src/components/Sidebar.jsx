@@ -1,9 +1,14 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
+import { useToggle } from 'wavyjs';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
 
+  const toggleTab = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   const tabs = [
     { title: 'Get Started', subtabs: ['Introduction', 'Installation', 'MonoRepo'] },
     { title: 'Backgrounds', subtabs: ['FadingBG', 'Cards', 'Music Bars', 'CheckBox'] },
@@ -31,14 +36,19 @@ const Sidebar = () => {
         `}
       >
         {tabs.map((tab, idx) => (
-          <div
-            className="flex flex-col gap-2 mb-4"
-            key={idx}
+        <div className="flex flex-col gap-2 mb-4" key={idx}>
+          {/* Tab title */}
+          <h2
+            className="text-lg font-semibold transition-colors duration-200 cursor-pointer flex justify-between items-center"
+            onClick={() => toggleTab(idx)}
           >
-            <h2 className="text-lg font-semibold transition-colors duration-200 cursor-pointer">
-              {tab.title}
-            </h2>
-            <div className="flex flex-col gap-2 mb-2">
+            {tab.title}
+            <span className="text-white/50">{openIndex === idx ? "▲" : "▼"}</span>
+          </h2>
+
+          {/* Subtabs (dropdown content) */}
+          {openIndex === idx && (
+            <div className="flex flex-col gap-2 mb-2 pl-4">
               {tab.subtabs.map((subtab, subIdx) => (
                 <h3
                   key={subIdx}
@@ -48,8 +58,9 @@ const Sidebar = () => {
                 </h3>
               ))}
             </div>
-          </div>
-        ))}
+          )}
+        </div>
+      ))}
       </div>
 
       {/* Overlay for mobile */}
