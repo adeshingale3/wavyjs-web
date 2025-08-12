@@ -2,9 +2,13 @@ import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { useToggle } from 'wavyjs';
 
-const Sidebar = () => {
+
+
+const Sidebar = ({onSubTabClick}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
+
+  
 
   const toggleTab = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -52,6 +56,9 @@ const Sidebar = () => {
               {tab.subtabs.map((subtab, subIdx) => (
                 <h3
                   key={subIdx}
+                  onClick={()=>{
+                    onSubTabClick(subtab);
+                  }}
                   className="text-sm text-white/70 cursor-pointer hover:text-white transition-colors duration-200"
                 >
                   {subtab}

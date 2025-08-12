@@ -6,13 +6,14 @@ import { useGSAP } from '@gsap/react';
 import Sidebar from '../components/Sidebar';
 import Information from '../components/Information';
 import Footer from '../components/Footer';
+import Introduction from '../components/Introduction';
 // import ButtonInfo from './ButtonInfo';
 
 
 
 const Components = () => {
     const navigate = useNavigate();
-    const tabs = ['Button'];
+    
     const [activeTab, setActiveTab] = useState('Information');
     useEffect(() => {
         gsap.fromTo(".nav", 
@@ -30,8 +31,10 @@ const Components = () => {
     // This function returns the correct component based on the active tab
     const renderTabContent = () => {
         switch (activeTab) {
-            case 'Informtaion':
+            case 'Information':
                 return <Information />;
+            case 'Introduction':
+                return <Introduction />;
             default:
                 return <Information />;
         }
@@ -49,7 +52,7 @@ const Components = () => {
             </div>
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
-                <div ><Sidebar /></div>
+                <div onSubTabCLick={(tab) => setActiveTab(tab)}><Sidebar /></div>
                 <div className='w-full h-screen mt-5 overflow-y-auto'>{renderTabContent()}</div>
             </div>
             <Footer />
