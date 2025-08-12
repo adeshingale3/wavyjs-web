@@ -11,8 +11,8 @@ const Sidebar = () => {
   };
   const tabs = [
     { title: 'Get Started', subtabs: ['Introduction', 'Installation', 'MonoRepo'] },
-    { title: 'Backgrounds', subtabs: ['FadingBG', 'Cards', 'Music Bars', 'CheckBox'] },
-    { title: 'Hooks', subtabs: ['useHover', 'useScroll', 'useSpeech', 'useToggle'] },
+    { title: 'Backgrounds', subtabs: ["FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
+    { title: 'Hooks', subtabs: ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"] },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Sidebar = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden absolute bottom-[103%] right-2 z-51 p-2 text-white"
+        className="md:hidden absolute bottom-[103%] right-2 z-51 p-1 text-white"
       >
         {isOpen ? <X size={22} />: <Menu size={22}/>}
       </button>
@@ -39,7 +39,7 @@ const Sidebar = () => {
         <div className="flex flex-col gap-2 mb-4 mt-6" key={idx}>
           {/* Tab title */}
           <h2
-            className="text-sm font-semibold transition-colors duration-200 cursor-pointer flex justify-between items-center"
+            className="text-lg font-semibold transition-colors duration-200 cursor-pointer flex justify-between items-center"
             onClick={() => toggleTab(idx)}
           >
             {tab.title}

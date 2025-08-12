@@ -26,8 +26,8 @@ const Navbar = () => {
 
         {/* Left menu */}
         <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-3 sm:px-4 md:px-6 gap-1 sm:gap-2'>
-          <Link onClick={notify} className='word text-white text-[10px] sm:text-xs md:text-sm' to="">Components</Link>
-          <Link onClick={notify} className='word text-white text-[10px] sm:text-xs md:text-sm' to="">Docs</Link>
+          <Link to='/components' className='word text-white text-[10px] sm:text-xs md:text-sm'>Components</Link>
+          <Link to='/' className='word text-white text-[10px] sm:text-xs md:text-sm'>Docs</Link>
 
         </div>
 
@@ -49,11 +49,11 @@ const Navbar = () => {
 
         {/* Right menu */}
         <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-6 sm:px-7 md:px-9 gap-1 sm:gap-2'>
-          <Link onClick={notify} className='word text-white text-[10px] sm:text-xs md:text-sm' to=""><FaXTwitter size={20}/></Link>
-          <Link onClick={notify} className='word text-white text-[10px] sm:text-xs md:text-sm' to=""><FaGithub size={20}/></Link>
+          <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="/"><FaXTwitter size={20}/></Link>
+          <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="/"><FaGithub size={20}/></Link>
         </div>
       </div>
-<ToastContainer/>
+
     </>
 
   )

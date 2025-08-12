@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Sidebar from '../components/Sidebar';
 import Information from '../components/Information';
+import Footer from '../components/Footer';
 // import ButtonInfo from './ButtonInfo';
 
 
@@ -37,7 +38,8 @@ const Components = () => {
     };
 
     return (
-        <div className='h-screen w-screen bg-black p-5 overflow-auto scrollbar-hidden'>
+        
+            <div className='h-screen w-screen bg-black p-5 overflow-auto scrollbar-hidden'>
 
             {/* Top bar where all component names will be listed */}
             <div className='nav w-[80%] h-20 relative z-10 flex flex-row items-center'>
@@ -47,10 +49,13 @@ const Components = () => {
             </div>
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
-                <div><Sidebar /></div>
-                <div className='w-full h-screen mt-5'>{renderTabContent()}</div>
+                <div ><Sidebar /></div>
+                <div className='w-full h-screen mt-5 overflow-y-auto'>{renderTabContent()}</div>
             </div>
+            <Footer />
         </div>
+        
+        
     );
 };
 

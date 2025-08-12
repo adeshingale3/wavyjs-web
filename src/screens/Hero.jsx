@@ -118,20 +118,20 @@ const Hero = () => {
 
                     <div className='buttons absolute bottom-20 w-[30vw] h-8 sm:h-10 md:h-12 lg:h-14 flex flex-row items-center justify-between gap-2 sm:gap-4 text-white z-9'>
                         <button
-                            onClick={notify}
+                            onClick={()=>navigate('/components')}
                             className="h-10 sm:h-12 px-4 flex-1 sm:flex-none sm:w-[48%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer"
                         >
                             Components
                         </button>
 
                         <button
-                            onClick={notify}
+                            onClick={()=>navigate('/')}
                             className="h-10 sm:h-12 px-4 flex justify-center items-center sm:w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer"
                         >
                             <FaXTwitter />
                         </button>
                     </div>
-                    <ToastContainer />
+                    
 
 
 
