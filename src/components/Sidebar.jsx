@@ -36,10 +36,10 @@ const Sidebar = () => {
         `}
       >
         {tabs.map((tab, idx) => (
-        <div className="flex flex-col gap-2 mb-4" key={idx}>
+        <div className="flex flex-col gap-2 mb-4 mt-6" key={idx}>
           {/* Tab title */}
           <h2
-            className="text-lg font-semibold transition-colors duration-200 cursor-pointer flex justify-between items-center"
+            className="text-sm font-semibold transition-colors duration-200 cursor-pointer flex justify-between items-center"
             onClick={() => toggleTab(idx)}
           >
             {tab.title}

@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <ToastContainer autoClose={5000} closeOnClick={true}/>
+      
       <div className='nav absolute z-50 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[45px] sm:h-[50px] md:h-[60px] flex flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-14 top-4 sm:top-6 md:top-10'>
 
         {/* Left menu */}
@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link onClick={notify} className='word text-white text-[10px] sm:text-xs md:text-sm' to=""><FaGithub size={20}/></Link>
         </div>
       </div>
-
+<ToastContainer/>
     </>
 
   )
