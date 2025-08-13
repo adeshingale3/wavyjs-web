@@ -4,11 +4,12 @@ import { useToggle } from 'wavyjs';
 
 
 
-const Sidebar = ({onSubTabClick}) => {
+const Sidebar = ({onTabSelect}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
 
   
+  console.log(onTabSelect);
 
   const toggleTab = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -57,7 +58,7 @@ const Sidebar = ({onSubTabClick}) => {
                 <h3
                   key={subIdx}
                   onClick={()=>{
-                    onSubTabClick(subtab);
+                    onTabSelect(subtab);
                   }}
                   className="text-sm text-white/70 cursor-pointer hover:text-white transition-colors duration-200"
                 >

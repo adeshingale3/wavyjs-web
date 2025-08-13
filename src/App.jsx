@@ -6,6 +6,7 @@ import ButtonsInfo from './components/ButtonsInfo'
 import Components from './screens/Components';
 import { Analytics } from "@vercel/analytics/react"
 import Introduction from './components/Introduction';
+import Installation from './components/Installation';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/buttonsinfo" element={<ButtonsInfo />} />
         <Route path="/components" element={<Components />} />
         <Route path="/introdunction" element={<Introduction />} />
+        <Route path="/installation" element={<Installation />} />
      
         
       </Routes>

@@ -7,6 +7,7 @@ import Sidebar from '../components/Sidebar';
 import Information from '../components/Information';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
+import Installation from '../components/Installation';
 // import ButtonInfo from './ButtonInfo';
 
 
@@ -15,6 +16,7 @@ const Components = () => {
     const navigate = useNavigate();
     
     const [activeTab, setActiveTab] = useState('Information');
+   
     useEffect(() => {
         gsap.fromTo(".nav", 
           {y:-100},
@@ -35,6 +37,8 @@ const Components = () => {
                 return <Information />;
             case 'Introduction':
                 return <Introduction />;
+            case 'Installation':
+                return <Installation />;
             default:
                 return <Information />;
         }
@@ -52,7 +56,7 @@ const Components = () => {
             </div>
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
-                <div onSubTabCLick={(tab) => setActiveTab(tab)}><Sidebar /></div>
+                <div ><Sidebar onTabSelect={(tab) => setActiveTab(tab)}/></div>
                 <div className='w-full h-screen mt-5 overflow-y-auto'>{renderTabContent()}</div>
             </div>
             <Footer />
