@@ -9,6 +9,11 @@ import Introduction from '../components/Introduction';
 import Installation from '../components/Installation';
 import Monorepo from '../components/Monorepo';
 import FadingBGInfo from '../components/Backgrounds/FadingBGInfo';
+import MaskedBGInfo from '../components/Backgrounds/MaskedBGInfo';
+import GithubBGInfo from '../components/Backgrounds/GithubBGInfo';
+import AnimatedBGInfo from '../components/Backgrounds/AnimatedBGInfo';
+import NameScrollerBG from '../components/Backgrounds/NameScrollerBG';
+import Hover from '../components/Hooks/Hover';
 
 
 
@@ -42,7 +47,17 @@ const Components = () => {
             case 'MonoRepo':
                 return <Monorepo />;
             case 'FadingBG':
-                return <FadingBGInfo />;     
+                return <FadingBGInfo />;  
+            case 'MaskedBG':
+                return <MaskedBGInfo />;
+            case 'GithubBG':
+                return <GithubBGInfo />; 
+            case 'AnimatedBG':
+                return <AnimatedBGInfo />;
+            case 'NameScrollerBG':
+                return <NameScrollerBG />;  
+            case 'useHover':
+                return <Hover />;          
             default:
                 return <Information />;
         }
