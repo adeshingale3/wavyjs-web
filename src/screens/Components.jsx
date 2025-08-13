@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ButtonsInfo from '../components/ButtonsInfo';
 import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -8,7 +7,8 @@ import Information from '../components/Information';
 import Footer from '../components/Footer';
 import Introduction from '../components/Introduction';
 import Installation from '../components/Installation';
-// import ButtonInfo from './ButtonInfo';
+import Monorepo from '../components/Monorepo';
+import FadingBGInfo from '../components/Backgrounds/FadingBGInfo';
 
 
 
@@ -39,6 +39,10 @@ const Components = () => {
                 return <Introduction />;
             case 'Installation':
                 return <Installation />;
+            case 'MonoRepo':
+                return <Monorepo />;
+            case 'FadingBG':
+                return <FadingBGInfo />;     
             default:
                 return <Information />;
         }
