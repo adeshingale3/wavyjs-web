@@ -61,7 +61,7 @@ const Components = () => {
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
                 <div ><Sidebar onTabSelect={(tab) => setActiveTab(tab)}/></div>
-                <div className='w-full h-screen mt-5 overflow-y-auto'>{renderTabContent()}</div>
+                <div className='w-full h-screen mt-5 overflow-y-auto scrollbar-hidden'>{renderTabContent()}</div>
             </div>
             <Footer />
         </div>
