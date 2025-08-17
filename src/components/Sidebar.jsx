@@ -16,6 +16,7 @@ const Sidebar = ({onTabSelect}) => {
   };
   const tabs = [
     { title: 'Get Started', subtabs: ['Introduction', 'Installation', 'MonoRepo'] },
+    { title: 'Icons', subtabs: ["React"] },
     { title: 'Backgrounds', subtabs: ["FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
     { title: 'Hooks', subtabs: ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"] },
   ];
@@ -33,7 +34,7 @@ const Sidebar = ({onTabSelect}) => {
       {/* Sidebar */}
       <div
         className={`
-          fixed top-0 left-0 h-full w-[70%] sm:w-[50%] md:w-[15vw]
+          fixed top-0 left-0 h-full w-[70%] sm:w-[70%] md:w-[15vw]
            text-white p-5 overflow-auto scrollbar-hidden bg-black
           transform transition-transform duration-300 ease-in-out z-50
           ${isOpen ? 'translate-x-0' : 'translate-x-100'}

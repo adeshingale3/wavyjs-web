@@ -14,6 +14,7 @@ import GithubBGInfo from '../components/Backgrounds/GithubBGInfo';
 import AnimatedBGInfo from '../components/Backgrounds/AnimatedBGInfo';
 import NameScrollerBG from '../components/Backgrounds/NameScrollerBG';
 import Hover from '../components/Hooks/Hover';
+import ReactIconInfo from '../components/Icons/ReactIconInfo';
 
 
 
@@ -57,7 +58,9 @@ const Components = () => {
             case 'NameScrollerBG':
                 return <NameScrollerBG />;  
             case 'useHover':
-                return <Hover />;          
+                return <Hover />; 
+            case 'React':
+                return <ReactIconInfo />;          
             default:
                 return <Information />;
         }
