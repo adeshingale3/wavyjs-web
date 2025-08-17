@@ -8,15 +8,13 @@ const Sidebar = ({onTabSelect}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
 
-  
-  console.log(onTabSelect);
 
   const toggleTab = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   const tabs = [
     { title: 'Get Started', subtabs: ['Introduction', 'Installation', 'MonoRepo'] },
-    { title: 'Icons', subtabs: ["React"] },
+    { title: 'Icons', subtabs: ["React", "JavaScript"] },
     { title: 'Backgrounds', subtabs: ["FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
     { title: 'Hooks', subtabs: ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"] },
   ];
@@ -60,6 +58,7 @@ const Sidebar = ({onTabSelect}) => {
                   key={subIdx}
                   onClick={()=>{
                     onTabSelect(subtab);
+                    setIsOpen(false);
                   }}
                   className="text-sm text-white/70 cursor-pointer hover:text-white transition-colors duration-200"
                 >

@@ -15,6 +15,8 @@ import AnimatedBGInfo from '../components/Backgrounds/AnimatedBGInfo';
 import NameScrollerBG from '../components/Backgrounds/NameScrollerBG';
 import Hover from '../components/Hooks/Hover';
 import ReactIconInfo from '../components/Icons/ReactIconInfo';
+import { JavaScriptIcon } from 'wavyjs';
+import JavascriptIconInfo from '../components/Icons/JavaScriptIcon';
 
 
 
@@ -60,7 +62,9 @@ const Components = () => {
             case 'useHover':
                 return <Hover />; 
             case 'React':
-                return <ReactIconInfo />;          
+                return <ReactIconInfo />;
+            case 'JavaScript':
+                return <JavascriptIconInfo />;            
             default:
                 return <Information />;
         }
