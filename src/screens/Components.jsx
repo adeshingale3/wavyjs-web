@@ -17,6 +17,7 @@ import Hover from '../components/Hooks/Hover';
 import ReactIconInfo from '../components/Icons/ReactIconInfo';
 import { JavaScriptIcon } from 'wavyjs';
 import JavascriptIconInfo from '../components/Icons/JavaScriptIcon';
+import JavaIconInfo from '../components/Icons/JavaIcon';
 
 
 
@@ -64,7 +65,9 @@ const Components = () => {
             case 'React':
                 return <ReactIconInfo />;
             case 'JavaScript':
-                return <JavascriptIconInfo />;            
+                return <JavascriptIconInfo />;
+            case 'Java':
+                return <JavaIconInfo />;             
             default:
                 return <Information />;
         }
