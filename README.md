@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only">
+  <!-- <a href="https://github.com/lucide-icons/lucide#gh-light-mode-only"> -->
     <img src="/public/wavy logo.png" alt="WavyJS - Beautiful & consistent icon backgrounds toolkit made by Adesh. Open-source project and a fork of Feather Icons." width="480">
   </a>
   <a href="https://github.com/lucide-icons/lucide#gh-dark-mode-only">
