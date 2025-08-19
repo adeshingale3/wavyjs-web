@@ -18,6 +18,9 @@ import ReactIconInfo from '../components/Icons/ReactIconInfo';
 import { JavaScriptIcon } from 'wavyjs';
 import JavascriptIconInfo from '../components/Icons/JavaScriptIcon';
 import JavaIconInfo from '../components/Icons/JavaIcon';
+import ReactCardIconInfo from '../components/Card-Icons/ReactCardIcon';
+import JavaCardIconInfo from '../components/Card-Icons/JavaCardIcon';
+import JavascriptCardIconInfo from '../components/Card-Icons/JavascriptCardIcon';
 
 
 
@@ -67,7 +70,13 @@ const Components = () => {
             case 'JavaScript':
                 return <JavascriptIconInfo />;
             case 'Java':
-                return <JavaIconInfo />;             
+                return <JavaIconInfo />;
+            case 'ReactCard':
+                return <ReactCardIconInfo />;
+            case 'JavaCard':
+                return <JavaCardIconInfo />; 
+            case 'JavaScriptCard':
+                return <JavascriptCardIconInfo />;              
             default:
                 return <Information />;
         }
