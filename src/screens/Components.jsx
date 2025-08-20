@@ -21,6 +21,13 @@ import JavaIconInfo from '../components/Icons/JavaIcon';
 import ReactCardIconInfo from '../components/Card-Icons/ReactCardIcon';
 import JavaCardIconInfo from '../components/Card-Icons/JavaCardIcon';
 import JavascriptCardIconInfo from '../components/Card-Icons/JavascriptCardIcon';
+import PythonCardIconInfo from '../components/Card-Icons/PythonCardInfo';
+import TailwindCardIconInfo from '../components/Card-Icons/TailwindCardIcon';
+import HtmlCardIconInfo from '../components/Card-Icons/HtmlCardIcon';
+import CssCardIconInfo from '../components/Card-Icons/CssCardIcon';
+import FlutterCardIconInfo from '../components/Card-Icons/FlutterCardIcon';
+import GithubCardIconInfo from '../components/Card-Icons/GithubCardIcon';
+import DartCardIconInfo from '../components/Card-Icons/DartCardIcon';
 
 
 
@@ -76,7 +83,21 @@ const Components = () => {
             case 'JavaCard':
                 return <JavaCardIconInfo />; 
             case 'JavaScriptCard':
-                return <JavascriptCardIconInfo />;              
+                return <JavascriptCardIconInfo />;
+            case 'PythonCard':
+                return <PythonCardIconInfo />;
+            case 'TailwindCard':
+                return <TailwindCardIconInfo />;
+            case 'HtmlCard':
+                return <HtmlCardIconInfo />;
+            case 'CssCard':
+                return <CssCardIconInfo />;
+            case 'FlutterCard':
+                return <FlutterCardIconInfo />;
+            case 'GithubCard':
+                return <GithubCardIconInfo />;
+            case 'DartCard':
+                return <DartCardIconInfo />;               
             default:
                 return <Information />;
         }
