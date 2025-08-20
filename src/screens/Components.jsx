@@ -39,6 +39,40 @@ import CssIconInfo from '../components/Icons/CssIcon';
 
 
 const Components = () => {
+    const tabComponents = {
+  Information: <Information />,
+  Introduction: <Introduction />,
+  Installation: <Installation />,
+  MonoRepo: <Monorepo />,
+  FadingBG: <FadingBGInfo />,
+  MaskedBG: <MaskedBGInfo />,
+  GithubBG: <GithubBGInfo />,
+  AnimatedBG: <AnimatedBGInfo />,
+  NameScrollerBG: <NameScrollerBG />,
+  useHover: <Hover />,
+
+  React: <ReactIconInfo />,
+  JavaScript: <JavascriptIconInfo />,
+  Java: <JavaIconInfo />,
+  Tailwind: <TailwindIconInfo />,
+  Python: <PythonIconInfo />,
+  HTML: <HtmlIconInfo />,
+  Github: <GithubIconInfo />,
+  Flutter: <FlutterIconInfo />,
+  Dart: <DartIconInfo />,
+  CSS: <CssIconInfo />,
+
+  ReactCard: <ReactCardIconInfo />,
+  JavaCard: <JavaCardIconInfo />,
+  JavaScriptCard: <JavascriptCardIconInfo />,
+  PythonCard: <PythonCardIconInfo />,
+  TailwindCard: <TailwindCardIconInfo />,
+  HtmlCard: <HtmlCardIconInfo />,
+  CssCard: <CssCardIconInfo />,
+  FlutterCard: <FlutterCardIconInfo />,
+  GithubCard: <GithubCardIconInfo />,
+  DartCard: <DartCardIconInfo />,
+};
     const navigate = useNavigate();
     
     const [activeTab, setActiveTab] = useState('Information');
@@ -57,76 +91,9 @@ const Components = () => {
         );
     })
     // This function returns the correct component based on the active tab
-    const renderTabContent = () => {
-        switch (activeTab) {
-            case 'Information':
-                return <Information />;
-            case 'Introduction':
-                return <Introduction />;
-            case 'Installation':
-                return <Installation />;
-            case 'MonoRepo':
-                return <Monorepo />;
-            case 'FadingBG':
-                return <FadingBGInfo />;  
-            case 'MaskedBG':
-                return <MaskedBGInfo />;
-            case 'GithubBG':
-                return <GithubBGInfo />; 
-            case 'AnimatedBG':
-                return <AnimatedBGInfo />;
-            case 'NameScrollerBG':
-                return <NameScrollerBG />;  
-            case 'useHover':
-                return <Hover />; 
-
-
-            case 'React':
-                return <ReactIconInfo />;
-            case 'JavaScript':
-                return <JavascriptIconInfo />;
-            case 'Java':
-                return <JavaIconInfo />;
-            case 'Tailwind':
-                return <TailwindIconInfo />;
-            case 'Python':
-                return <PythonIconInfo />;
-            case 'HTML':
-                return <HtmlIconInfo />;
-            case 'Github':
-                return <GithubIconInfo />;
-            case 'Flutter':
-                return <FlutterIconInfo />;
-            case 'Dart':
-                return <DartIconInfo />;
-            case 'CSS':
-                return <CssIconInfo />;
-
-
-            case 'ReactCard':
-                return <ReactCardIconInfo />;
-            case 'JavaCard':
-                return <JavaCardIconInfo />; 
-            case 'JavaScriptCard':
-                return <JavascriptCardIconInfo />;
-            case 'PythonCard':
-                return <PythonCardIconInfo />;
-            case 'TailwindCard':
-                return <TailwindCardIconInfo />;
-            case 'HtmlCard':
-                return <HtmlCardIconInfo />;
-            case 'CssCard':
-                return <CssCardIconInfo />;
-            case 'FlutterCard':
-                return <FlutterCardIconInfo />;
-            case 'GithubCard':
-                return <GithubCardIconInfo />;
-            case 'DartCard':
-                return <DartCardIconInfo />;               
-            default:
-                return <Information />;
-        }
-    };
+    const renderTabContent = ( activeTab ) => {
+  return tabComponents[activeTab] || <Information />;
+};
 
     return (
         
@@ -141,7 +108,7 @@ const Components = () => {
             {/* Below Content */}
             <div className='info h-screen flex flex-row justify-between h-full w-full'>
                 <div ><Sidebar onTabSelect={(tab) => setActiveTab(tab)}/></div>
-                <div className='w-full h-screen mt-5 overflow-y-auto scrollbar-hidden'>{renderTabContent()}</div>
+                <div className='w-full h-screen mt-5 overflow-y-auto scrollbar-hidden'>{renderTabContent(activeTab)}</div>
             </div>
             <Footer />
         </div>
