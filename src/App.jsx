@@ -15,9 +15,8 @@ const App = () => {
       <Analytics/>
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/components" element={<Components />} />
-        <Route path="/introdunction" element={<Introduction />} />
-        <Route path="/installation" element={<Installation />} />
+        <Route path="/components/*" element={<Components />} />
+        
      
         
       </Routes>
