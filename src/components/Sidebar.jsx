@@ -14,7 +14,7 @@ const Sidebar = ({onTabSelect}) => {
   };
   const tabs = [
     { title: 'Get Started', subtabs: ['Introduction', 'Installation', 'MonoRepo'] },
-    { title: 'Icons', subtabs: ["React", "JavaScript", "Java"] },
+    { title: 'Icons', subtabs: ["React", "JavaScript", "Java", "Tailwind", "Python", "HTML", "CSS", "Github", "Flutter", "Dart"] },
     { title: 'Card Icons', subtabs: ["ReactCard", "JavaScriptCard", "JavaCard", "PythonCard", "TailwindCard", "HtmlCard", "CssCard", "FlutterCard", "GithubCard", "DartCard"] },
     { title: 'Backgrounds', subtabs: ["FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
     { title: 'Hooks', subtabs: ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"] },

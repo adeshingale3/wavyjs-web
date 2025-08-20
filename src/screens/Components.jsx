@@ -28,6 +28,13 @@ import CssCardIconInfo from '../components/Card-Icons/CssCardIcon';
 import FlutterCardIconInfo from '../components/Card-Icons/FlutterCardIcon';
 import GithubCardIconInfo from '../components/Card-Icons/GithubCardIcon';
 import DartCardIconInfo from '../components/Card-Icons/DartCardIcon';
+import TailwindIconInfo from '../components/Icons/TailwindIcon';
+import PythonIconInfo from '../components/Icons/PythonIcon';
+import HtmlIconInfo from '../components/Icons/HtmlIcon';
+import GithubIconInfo from '../components/Icons/GithubIcon';
+import FlutterIconInfo from '../components/Icons/FlutterIcon';
+import DartIconInfo from '../components/Icons/DartIcon';
+import CssIconInfo from '../components/Icons/CssIcon';
 
 
 
@@ -72,12 +79,30 @@ const Components = () => {
                 return <NameScrollerBG />;  
             case 'useHover':
                 return <Hover />; 
+
+
             case 'React':
                 return <ReactIconInfo />;
             case 'JavaScript':
                 return <JavascriptIconInfo />;
             case 'Java':
                 return <JavaIconInfo />;
+            case 'Tailwind':
+                return <TailwindIconInfo />;
+            case 'Python':
+                return <PythonIconInfo />;
+            case 'HTML':
+                return <HtmlIconInfo />;
+            case 'Github':
+                return <GithubIconInfo />;
+            case 'Flutter':
+                return <FlutterIconInfo />;
+            case 'Dart':
+                return <DartIconInfo />;
+            case 'CSS':
+                return <CssIconInfo />;
+
+
             case 'ReactCard':
                 return <ReactCardIconInfo />;
             case 'JavaCard':
