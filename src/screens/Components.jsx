@@ -38,6 +38,8 @@ import FlutterIconInfo from '../components/Icons/FlutterIcon';
 import DartIconInfo from '../components/Icons/DartIcon';
 import CssIconInfo from '../components/Icons/CssIcon';
 import InteractiveDotsBGInfo from '../components/Backgrounds/InteractiveDotBG';
+import ColourfulBGInfo from '../components/Backgrounds/ColurfullGridBG';
+import DarkGridBGInfo from '../components/Backgrounds/DarkGridBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -46,6 +48,8 @@ export const tabRoutes = {
   Installation: { path: "installation", component: <Installation /> },
   MonoRepo: { path: "monorepo", component: <Monorepo /> },
   InteractiveDotsBG: {path: "interactive-dots", component: <InteractiveDotsBGInfo />},
+  // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
+  DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
   MaskedBG: { path: "masked-bg", component: <MaskedBGInfo /> },
   GithubBG: { path: "github-bg", component: <GithubBGInfo /> },
