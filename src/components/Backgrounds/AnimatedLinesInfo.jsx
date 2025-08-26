@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import { InteractiveBoxGrid } from 'wavyjs'
+import { AnimatedLine } from 'wavyjs'
 
-const InteractiveBoxGridInfo = () => {
+const AnimatedLinesBGInfo = () => {
     const divRef = useRef(null);
 
     const handleCopy = () => {
@@ -18,14 +18,14 @@ const InteractiveBoxGridInfo = () => {
     };
     return (
         <div className='text-white flex flex-col ml-5 sm:ml-5 md:ml-30'>
-            <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>Interactive Box Grid BG</h1>
-            <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>Hover on the background.</h4>
+            <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>Animated Lines BG</h1>
+            <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>Simple animated BG for websites.</h4>
             <div className='h-[60vh] w-[70vw] sm:w-[75vw] md:w-[50vw] mt-10 py-5'>
                 <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
                 <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
 
                     <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
-                        <InteractiveBoxGrid boxColor='#2a2828ff' spacing={30}/>
+                        <AnimatedLine/>
                         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                             Your Content Goes Here
                         </div>
@@ -43,14 +43,14 @@ const InteractiveBoxGridInfo = () => {
                 <h2 className='text-lg sm:text-lg md:text-2xl mt-10'>Usage</h2>
                 <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
                     <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
-                        {"import { InteractiveBoxGrid } from 'wavyjs'"}
+                        {"import { AnimatedLine } from 'wavyjs'"}
                     </h1>
                     <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
                 </div>
                 <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
                     <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
                         {'<div className="relative w-full h-full overflow-hidden flex items-center justify-center">'}<br />
-                        {"<InteractiveBoxGrid boxColor='#2a2828ff' spacing={30}/>"}<br />
+                        {"<AnimatedLine/>"}<br />
                         {'<div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">'}<br />
                             {"Your Content Goes Here"}<br />
                         {"</div>"}<br />
@@ -71,4 +71,4 @@ const InteractiveBoxGridInfo = () => {
     )
 }
 
-export default InteractiveBoxGridInfo
+export default AnimatedLinesBGInfo
