@@ -42,6 +42,7 @@ import ColourfulBGInfo from '../components/Backgrounds/ColurfullGridBG';
 import DarkGridBGInfo from '../components/Backgrounds/DarkGridBGInfo';
 import InteractiveBoxGridInfo from '../components/Backgrounds/InteractiveBoxGridInfo';
 import AnimatedLinesBGInfo from '../components/Backgrounds/AnimatedLinesInfo';
+import AnimatedDiamondBGInfo from '../components/Backgrounds/AnimatedDiamondBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -52,6 +53,7 @@ export const tabRoutes = {
   InteractiveDotsBG: {path: "interactive-dots", component: <InteractiveDotsBGInfo />},
   InteractiveBoxGridBG: {path: "interactive-box-grid", component: <InteractiveBoxGridInfo />},
   AnimatedLineBG: {path: "animated-line", component: <AnimatedLinesBGInfo />},
+  AnimatedDiamondBG:{path: "animated-diamond", component: <AnimatedDiamondBGInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
