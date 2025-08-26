@@ -40,6 +40,7 @@ import CssIconInfo from '../components/Icons/CssIcon';
 import InteractiveDotsBGInfo from '../components/Backgrounds/InteractiveDotBG';
 import ColourfulBGInfo from '../components/Backgrounds/ColurfullGridBG';
 import DarkGridBGInfo from '../components/Backgrounds/DarkGridBGInfo';
+import InteractiveBoxGridInfo from '../components/Backgrounds/InteractiveBoxGridInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -48,6 +49,7 @@ export const tabRoutes = {
   Installation: { path: "installation", component: <Installation /> },
   MonoRepo: { path: "monorepo", component: <Monorepo /> },
   InteractiveDotsBG: {path: "interactive-dots", component: <InteractiveDotsBGInfo />},
+  InteractiveBoxGridBG: {path: "interactive-box-grid", component: <InteractiveBoxGridInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
