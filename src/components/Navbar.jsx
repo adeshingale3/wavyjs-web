@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Right menu */}
         <div className='bg-black/30 backdrop-blur-lg w-[40%] sm:w-[30%] h-full rounded-full shadow-inner shadow-white/20 flex flex-row items-center justify-between px-6 sm:px-7 md:px-9 gap-1 sm:gap-2'>
           <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="https://x.com/adesshhhhh"><FaXTwitter size={20}/></Link>
-          <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="/"><FaGithub size={20}/></Link>
+          <Link className='word text-white text-[10px] sm:text-xs md:text-sm' to="https://github.com/adeshingale3/wavyjs-web"><FaGithub size={20}/></Link>
         </div>
       </div>
 

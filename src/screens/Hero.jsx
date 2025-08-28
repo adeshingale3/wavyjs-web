@@ -66,6 +66,10 @@ const Hero = () => {
 
     }, []);
 
+    const handleExternalClick = () => {
+    window.open('https://x.com/adesshhhhh', '_blank');
+  };
+
 
 
     return (
@@ -125,7 +129,7 @@ const Hero = () => {
                         </button>
 
                         <button
-                            onClick={()=>navigate('/')}
+                            onClick={handleExternalClick}
                             className="h-10 sm:h-12 px-4 flex justify-center items-center sm:w-[40%] bg-black/80 rounded-full backdrop-blur-lg text-[10px] sm:text-sm md:text-base lg:text-lg shadow-inner shadow-white/20 cursor-pointer"
                         >
                             <FaXTwitter />
