@@ -45,6 +45,7 @@ import AnimatedLinesBGInfo from '../components/Backgrounds/AnimatedLinesInfo';
 import AnimatedDiamondBGInfo from '../components/Backgrounds/AnimatedDiamondBGInfo';
 import AnimatedChevronBGInfo from '../components/Backgrounds/AnimatedChevronBGInfo';
 import GraphBGInfo from '../components/Backgrounds/GraphBGInfo';
+import NotebookBGInfo from '../components/Backgrounds/NotebookBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -57,6 +58,7 @@ export const tabRoutes = {
   AnimatedLineBG: {path: "animated-line", component: <AnimatedLinesBGInfo />},
   AnimatedDiamondBG:{path: "animated-diamond", component: <AnimatedDiamondBGInfo />},
    AnimatedChevronBG:{path: "animated-chevron", component: <AnimatedChevronBGInfo />},
+   NotebookBG: {path: "notebook-bg", component: <NotebookBGInfo />},
    GraphBG:{path: "graph-bg", component: <GraphBGInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
