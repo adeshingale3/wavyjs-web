@@ -46,6 +46,7 @@ import AnimatedDiamondBGInfo from '../components/Backgrounds/AnimatedDiamondBGIn
 import AnimatedChevronBGInfo from '../components/Backgrounds/AnimatedChevronBGInfo';
 import GraphBGInfo from '../components/Backgrounds/GraphBGInfo';
 import NotebookBGInfo from '../components/Backgrounds/NotebookBGInfo';
+import AnimatedBusinessBGInfo from '../components/Backgrounds/AnimatedBusinessBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -60,6 +61,7 @@ export const tabRoutes = {
    AnimatedChevronBG:{path: "animated-chevron", component: <AnimatedChevronBGInfo />},
    NotebookBG: {path: "notebook-bg", component: <NotebookBGInfo />},
    GraphBG:{path: "graph-bg", component: <GraphBGInfo />},
+   AnimatedBusinessBG:{path: "animated-business", component: <AnimatedBusinessBGInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
