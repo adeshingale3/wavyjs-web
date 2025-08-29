@@ -25,7 +25,7 @@ const AnimatedGradientBGInfo = () => {
                 <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
 
                     <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
-                        <AnimatedGradient />
+                        <AnimatedGradient duration={2} />
                         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                             Your Content Goes Here
                         </div>
