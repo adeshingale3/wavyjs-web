@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Information = () => {
-  const Backgrounds = ["FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"];
+  const Backgrounds = ["InteractiveDotsBG", "InteractiveBoxGridBG", "AnimatedDiamondBG","AnimatedChevronBG", "AnimatedBusinessBG","AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG","AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"];
   const Hooks = ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"];
+  const Icons = ["React", "JavaScript", "Java", "Tailwind", "Python", "HTML", "CSS", "Github", "Flutter", "Dart", "ReactCard", "JavaScriptCard", "JavaCard", "PythonCard", "TailwindCard", "HtmlCard", "CssCard", "FlutterCard", "GithubCard", "DartCard"]
   return (
     <div className='text-white flex flex-col ml-5 sm:ml-5 md:ml-30'>
       <h1 className='text-[28px] sm:text-[36px] md:text-[50px] font-bold'>Components</h1>
@@ -15,7 +16,16 @@ const Information = () => {
             <h1 key={idx} className='text-md sm:text-sm md:text-xl'>{bg}</h1>
           ))}
           </div>
-                <h1 className='text-xl sm:text-lg md:text-3xl font-bold underline'>Hooks</h1>
+
+      <h1 className='text-xl sm:text-lg md:text-3xl font-bold underline'>Icons</h1>
+          <div className='flex flex-row flex-wrap gap-x-20 gap-y-5 sm:gap-y-5 md:gap-y-10'>
+            {Icons.map((ic, idx) => (
+            <h1 key={idx} className='text-md sm:text-sm md:text-xl'>{ic}</h1>
+          ))}
+          </div>
+
+
+      <h1 className='text-xl sm:text-lg md:text-3xl font-bold underline'>Hooks</h1>
 
           <div className='flex flex-row flex-wrap gap-x-20 gap-y-5 sm:gap-y-5 md:gap-y-10'>
             {Hooks.map((hk, idx) => (

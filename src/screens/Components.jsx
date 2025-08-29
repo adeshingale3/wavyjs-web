@@ -110,7 +110,7 @@ const Components = () => {
   });
 
   return (
-    <div className="h-screen w-screen bg-black p-5 overflow-auto scrollbar-hidden">
+    <div className="h-full w-full bg-black p-5 scrollbar-hidden">
       {/* Top bar */}
       <div className="nav w-[80%] h-20 relative z-10 flex flex-row items-center">
         <Link
@@ -122,9 +122,9 @@ const Components = () => {
       </div>
 
       {/* Content */}
-      <div className="info h-screen flex flex-row justify-between h-full w-full">
+      <div className="info flex flex-row justify-between h-full w-full">
         <Sidebar />
-        <div className="w-full h-screen mt-5 overflow-y-auto scrollbar-hidden">
+        <div className="w-full h-full mt-5 overflow-y-auto scrollbar-hidden">
           <Routes>
             {Object.entries(tabRoutes).map(([key, { path, component }]) => (
               <Route key={key} path={path} element={component} />
