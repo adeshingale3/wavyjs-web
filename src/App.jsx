@@ -24,9 +24,9 @@ function ScrollToTop() {
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, // scroll smoothing speed
-      smooth: true,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,  // smooth for desktop wheel
+      smoothTouch: true,  // ✅ smooth also on touch / mobile
+      lerp: 0.1, 
     })
 
     lenis.on("scroll", ScrollTrigger.update)

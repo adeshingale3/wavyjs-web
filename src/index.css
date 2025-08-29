@@ -6,6 +6,7 @@ body {
   overflow: hidden; /* Hide scrollbars */
   font-family: 'Syne', sans-serif;
   /* font-family: 'Poppins', sans-serif; */
+  background-color: black;
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
