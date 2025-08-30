@@ -1,70 +1,65 @@
 import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { AnimatedBG, GithubBG} from 'wavyjs'
+import { GithubBG } from 'wavyjs'
 
 const GithubBGInfo = () => {
   const divRef = useRef(null);
 
   const handleCopy = () => {
     if (divRef.current) {
-      const text = divRef.current.innerText; // get all visible text
+      const text = divRef.current.innerText;
       navigator.clipboard.writeText(text)
-        .then(() => {
-          alert("Copied to clipboard!");
-        })
-        .catch(err => {
-          console.error("Failed to copy text: ", err);
-        });
+        .then(() => alert("Copied to clipboard!"))
+        .catch(err => console.error("Failed to copy text: ", err));
     }
   };
+
   return (
     <div className='text-white flex flex-col ml-5 sm:ml-5 md:ml-30'>
       <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>Github BG</h1>
-      <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>A github contribution style background. You can use it in your portfolio.</h4>
+      <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>
+        A GitHub contribution style background. Perfect for portfolios.
+      </h4>
+
+      {/* Preview */}
       <div className='h-[60vh] w-[70vw] sm:w-[75vw] md:w-[50vw] mt-10 py-5'>
-          <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
-          <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
-              <GithubBG />
-          </div>
+        <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
+        <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
+          <GithubBG />
+        </div>
       </div>
 
+      {/* Installation */}
       <div className='w-[50vw] h-auto flex flex-col mt-20'>
         <h2 className='text-lg sm:text-lg md:text-2xl '>Installation</h2>
-        <div className=' flex flex-row items-center justify-between p-4 bg-white/10 rounded-lg h-15 w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
-          <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
-            <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines customStyle={{ overflowX: "hidden" }}>
-                                        npm i wavyjs@latest
-                                    </SyntaxHighlighter>
-          </h1>
-          <button onClick={handleCopy} className='text-white bg-white/30 right-0 px-2 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        <div className='flex flex-row items-center justify-between p-4 bg-white/10 rounded-lg mt-4'>
+          <SyntaxHighlighter language="bash" style={vscDarkPlus} wrapLongLines>
+            npm i wavyjs@latest
+          </SyntaxHighlighter>
+          <button onClick={handleCopy} className='text-white bg-white/30 px-2 rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
 
+        {/* Usage */}
         <h2 className='text-lg sm:text-lg md:text-2xl mt-10'>Usage</h2>
-        <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
-          <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
-            {"import { GithubBG } from 'wavyjs'"}
-            </h1>
-          <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
-        </div>
-        <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
-          <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
-            {"<div className='h-full w-full'>"}<br/>
-                    {"<GithubBG />"}<br/>
-          {"</div>"}
-            </h1>
-          <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
+        <div className='flex flex-row justify-between p-4 bg-white/10 rounded-lg mt-4'>
+          <SyntaxHighlighter language="jsx" style={vscDarkPlus} wrapLongLines>
+            {`import { GithubBG } from 'wavyjs'`}
+          </SyntaxHighlighter>
+          <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
 
-        
-
+        <div className='flex flex-row justify-between p-4 bg-white/10 rounded-lg mt-4'>
+          <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines>
+{`<div className="h-full w-full">
+  <GithubBG />
+</div>`}
+          </SyntaxHighlighter>
+          <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
       </div>
-        
-    
-      
-    
     </div>
   )
 }
 
-export default GithubBGInfo
+export default GithubBG
