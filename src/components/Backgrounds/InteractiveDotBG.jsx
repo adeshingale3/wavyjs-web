@@ -1,4 +1,6 @@
 import React, { useRef } from 'react'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { InteractiveDotGrid } from 'wavyjs'
 
 const InteractiveDotsBGInfo = () => {
@@ -30,7 +32,11 @@ const InteractiveDotsBGInfo = () => {
             <div className='w-[50vw] h-auto flex flex-col mt-20'>
                 <h2 className='text-lg sm:text-lg md:text-2xl '>Installation</h2>
                 <div className=' flex flex-row items-center justify-between p-4 bg-white/10 rounded-lg h-15 w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
-                    <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>npm i wavyjs</h1>
+                    <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
+                        <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines customStyle={{ overflowX: "hidden" }}>
+                                                    npm i wavyjs@latest
+                                                </SyntaxHighlighter>
+                    </h1>
                     <button onClick={handleCopy} className='text-white bg-white/30 right-0 px-2 rounded-full cursor-pointer text-[12px]'>Copy</button>
                 </div>
 
