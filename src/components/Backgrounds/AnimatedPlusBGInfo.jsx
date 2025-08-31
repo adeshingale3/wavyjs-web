@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { AnimatedStar } from 'wavyjs'
+import { AnimatedPlus } from 'wavyjs'
 
-const AnimatedStarBGInfo = () => {
+const AnimatedPlusBGInfo = () => {
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -17,7 +17,7 @@ const AnimatedStarBGInfo = () => {
 
   return (
     <div className='text-white flex flex-col ml-5 sm:ml-5 md:ml-30'>
-      <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>Animated Star BG</h1>
+      <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>Animated Plus BG</h1>
       <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>
         Simple animated BG for websites.
       </h4>
@@ -27,7 +27,7 @@ const AnimatedStarBGInfo = () => {
         <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
         <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
           <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
-            <AnimatedStar />
+            <AnimatedPlus />
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
               Your Content Goes Here
             </div>
@@ -61,7 +61,7 @@ const AnimatedStarBGInfo = () => {
             wrapLongLines
             customStyle={{ overflowX: "hidden" }}
           >
-            {`import { AnimatedStar } from 'wavyjs'`}
+            {`import { AnimatedPlus } from 'wavyjs'`}
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
@@ -75,7 +75,7 @@ const AnimatedStarBGInfo = () => {
             customStyle={{ overflowX: "hidden" }}
           >
 {`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">
-  <AnimatedStar />
+  <AnimatedPlus />
   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
     Your Content Goes Here
   </div>
@@ -88,4 +88,4 @@ const AnimatedStarBGInfo = () => {
   )
 }
 
-export default AnimatedStarBGInfo
+export default AnimatedPlusBGInfo

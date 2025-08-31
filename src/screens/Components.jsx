@@ -49,6 +49,7 @@ import NotebookBGInfo from '../components/Backgrounds/NotebookBGInfo';
 import AnimatedBusinessBGInfo from '../components/Backgrounds/AnimatedBusinessBGInfo';
 import AnimatedGradientBGInfo from '../components/Backgrounds/AnimatedGradientBGInfo';
 import AnimatedStarBGInfo from '../components/Backgrounds/AnimatedStarBGInfo';
+import AnimatedPlusBGInfo from '../components/Backgrounds/AnimatedPlusBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -66,6 +67,7 @@ export const tabRoutes = {
    AnimatedBusinessBG:{path: "animated-business", component: <AnimatedBusinessBGInfo />},
    AnimatedGradientBG: {path: "animated-gradient-bg" , component: <AnimatedGradientBGInfo />},
    AnimatedStar: {path: "animated-star" , component: <AnimatedStarBGInfo />},
+   AnimatedPlus : {path: "animted-plus", component: <AnimatedPlusBGInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
