@@ -1,9 +1,61 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Information = () => {
-  const Backgrounds = ["InteractiveDotsBG", "InteractiveBoxGridBG", "AnimatedDiamondBG","AnimatedChevronBG", "AnimatedBusinessBG","AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG","AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"];
-  const Hooks = ["useHover", "useSpeechSynthesis", "useToggle", "useCursor", "useSesstionTimeOut", "useFetch"];
-  const Icons = ["React", "JavaScript", "Java", "Tailwind", "Python", "HTML", "CSS", "Github", "Flutter", "Dart", "ReactCard", "JavaScriptCard", "JavaCard", "PythonCard", "TailwindCard", "HtmlCard", "CssCard", "FlutterCard", "GithubCard", "DartCard"]
+  const Backgrounds = [
+  { name: "InteractiveDotsBG", path: "interactive-dots" },
+  { name: "InteractiveBoxGridBG", path: "interactive-box-grid" },
+  { name: "AnimatedDiamondBG", path: "animated-diamond" },
+  { name: "AnimatedChevronBG", path: "animated-chevron" },
+  { name: "AnimatedBusinessBG", path: "animated-business" },
+  { name: "AnimatedGradientBG", path: "animated-gradient-bg" },
+  { name: "GraphBG", path: "graph-bg" },
+  { name: "NotebookBG", path: "notebook-bg" },
+  { name: "DarkGridBG", path: "dark-grid-bg" },
+  { name: "AnimatedLineBG", path: "animated-line" },
+  { name: "FadingBG", path: "fading-bg" },
+  { name: "AnimatedBG", path: "animated-bg" },
+  { name: "MaskedBG", path: "masked-bg" },
+  { name: "GithubBG", path: "github-bg" },
+  { name: "NameScrollerBG", path: "name-scroller" },
+  { name: "AnimatedStar", path: "animated-star" },
+  { name: "AnimatedPlus", path: "animted-plus" }, // typo kept same as your old code
+];
+
+const Hooks = [
+  { name: "useHover", path: "use-hover" },
+  { name: "useSpeechSynthesis", path: "use-speech-synthesis" },
+  { name: "useToggle", path: "use-toggle" },
+  { name: "useCursor", path: "use-cursor" },
+  { name: "useSesstionTimeOut", path: "use-session-timeout" },
+  { name: "useFetch", path: "use-fetch" },
+];
+
+const Icons = [
+  { name: "React", path: "react" },
+  { name: "JavaScript", path: "javascript" },
+  { name: "Java", path: "java" },
+  { name: "Tailwind", path: "tailwind" },
+  { name: "Python", path: "python" },
+  { name: "HTML", path: "html" },
+  { name: "CSS", path: "css" },
+  { name: "Github", path: "github" },
+  { name: "Flutter", path: "flutter" },
+  { name: "Dart", path: "dart" },
+
+  // Card Icons
+  { name: "ReactCard", path: "react-card" },
+  { name: "JavaScriptCard", path: "javascript-card" },
+  { name: "JavaCard", path: "java-card" },
+  { name: "PythonCard", path: "python-card" },
+  { name: "TailwindCard", path: "tailwind-card" },
+  { name: "HtmlCard", path: "html-card" },
+  { name: "CssCard", path: "css-card" },
+  { name: "FlutterCard", path: "flutter-card" },
+  { name: "GithubCard", path: "github-card" },
+  { name: "DartCard", path: "dart-card" },
+];
+
   return (
     <div className='text-white flex flex-col ml-5 sm:ml-5 md:ml-30'>
       <h1 className='text-[28px] sm:text-[36px] md:text-[50px] font-bold'>Components</h1>
@@ -13,14 +65,14 @@ const Information = () => {
       <h1 className='text-xl sm:text-lg md:text-3xl font-bold underline'>Backgrounds</h1>
           <div className='flex flex-row flex-wrap gap-x-20 gap-y-5 sm:gap-y-5 md:gap-y-10'>
             {Backgrounds.map((bg, idx) => (
-            <h1 key={idx} className='text-md sm:text-sm md:text-xl'>{bg}</h1>
+            <Link key={idx} to={bg.path} className='text-md sm:text-sm md:text-xl'>{bg.name}</Link>
           ))}
           </div>
 
       <h1 className='text-xl sm:text-lg md:text-3xl font-bold underline'>Icons</h1>
           <div className='flex flex-row flex-wrap gap-x-20 gap-y-5 sm:gap-y-5 md:gap-y-10'>
             {Icons.map((ic, idx) => (
-            <h1 key={idx} className='text-md sm:text-sm md:text-xl'>{ic}</h1>
+            <Link key={idx} to={ic.path} className='text-md sm:text-sm md:text-xl'>{ic.name}</Link>
           ))}
           </div>
 
@@ -29,7 +81,7 @@ const Information = () => {
 
           <div className='flex flex-row flex-wrap gap-x-20 gap-y-5 sm:gap-y-5 md:gap-y-10'>
             {Hooks.map((hk, idx) => (
-            <h1 key={idx} className='text-md sm:text-sm md:text-xl'>{hk}</h1>
+            <Link key={idx} to={hk.path} className='text-md sm:text-sm md:text-xl'>{hk.name}</Link>
           ))}
           </div>
       </div>

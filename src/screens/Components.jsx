@@ -38,7 +38,6 @@ import FlutterIconInfo from '../components/Icons/FlutterIcon';
 import DartIconInfo from '../components/Icons/DartIcon';
 import CssIconInfo from '../components/Icons/CssIcon';
 import InteractiveDotsBGInfo from '../components/Backgrounds/InteractiveDotBG';
-import ColourfulBGInfo from '../components/Backgrounds/ColurfullGridBG';
 import DarkGridBGInfo from '../components/Backgrounds/DarkGridBGInfo';
 import InteractiveBoxGridInfo from '../components/Backgrounds/InteractiveBoxGridInfo';
 import AnimatedLinesBGInfo from '../components/Backgrounds/AnimatedLinesInfo';
