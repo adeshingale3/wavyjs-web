@@ -67,4 +67,6 @@ import {ReactCardIcon} from 'wavyjs'
 ```tsx
 <ReactCardIcon />
 ```
+## License
 
+Wavy is totally free for commercial use and personal use.
