@@ -65,7 +65,7 @@ export const tabRoutes = {
    GraphBG:{path: "graph-bg", component: <GraphBGInfo />},
    AnimatedBusinessBG:{path: "animated-business", component: <AnimatedBusinessBGInfo />},
    AnimatedGradientBG: {path: "animated-gradient-bg" , component: <AnimatedGradientBGInfo />},
-   AnimatedStar: {path: "animated-star", component: <AnimatedStarBGInfo />},
+   AnimatedStar: {path: "animated-star" , component: <AnimatedStarBGInfo />},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
@@ -112,34 +112,34 @@ const Components = () => {
   });
 
   return (
-    <div className="h-full w-full bg-black p-5 scrollbar-hidden">
-      {/* Top bar */}
-      <div className="nav w-[80%] h-20 relative z-10 flex flex-row items-center">
-        <Link
-          to="/"
-          className="h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] absolute flex items-center justify-center "
-        >
-          <img src="/wavy logo.png" />
-        </Link>
-      </div>
-
-      {/* Content */}
-      <div className="info flex flex-row justify-between h-full w-full">
-        <Sidebar />
-        <div className="w-full h-full mt-5 overflow-y-auto scrollbar-hidden">
-          <Routes>
-            {Object.entries(tabRoutes).map(([key, { path, component }]) => (
-              <Route key={key} path={path} element={component} />
-            ))}
-            {/* default when only /components */}
-            <Route index element={<Information />} />
-          </Routes>
-        </div>
-      </div>
-
-      <Footer />
+  <div className="h-full w-full bg-black p-5">
+    {/* Top bar */}
+    <div className="nav w-[80%] h-20 relative z-10 flex flex-row items-center">
+      <Link
+        to="/"
+        className="h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] absolute flex items-center justify-center "
+      >
+        <img src="/wavy logo.png" />
+      </Link>
     </div>
-  );
+
+    {/* Content */}
+    <div className="info flex flex-row justify-between w-full mt-5">
+      <Sidebar />
+      <div className="w-full mt-5 overflow-y-auto">
+        <Routes>
+          {Object.entries(tabRoutes).map(([key, { path, component }]) => (
+            <Route key={key} path={path} element={component} />
+          ))}
+          <Route index element={<Information />} />
+        </Routes>
+      </div>
+    </div>
+
+    <Footer />
+  </div>
+)
+
 };
 
 export default Components;
