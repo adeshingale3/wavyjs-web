@@ -2,8 +2,37 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { InteractiveDotGrid } from 'wavyjs'
+import PropsTable from '../PropTable'
 
 const InteractiveDotsBGInfo = () => {
+  const propsData = [
+  {
+    name: "dotSize",
+    type: "number",
+    description: "Diameter of each dot in pixels."
+  },
+  {
+    name: "dotSpacing",
+    type: "number",
+    description: "Distance between adjacent dots in the grid."
+  },
+  {
+    name: "maxDistance",
+    type: "number",
+    description: "Maximum distance for interaction/connection effects."
+  },
+  {
+    name: "animationSpeed",
+    type: "number",
+    description: "Speed of the dot animations or movement."
+  },
+  {
+    name: "className",
+    type: "string",
+    description: "Additional CSS or Tailwind classes for styling."
+  }
+];
+
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text)
       .then(() => alert("Copied to clipboard!"))
@@ -49,7 +78,7 @@ const InteractiveDotsBGInfo = () => {
         </div>
 
         <div className="flex flex-row justify-between p-4 bg-white/10 rounded-lg mt-4">
-          <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines>
+          <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines customStyle={{ overflowX: "hidden" }}>
 {`<div className='h-screen w-screen flex items-center justify-center'>
   <div className='absolute z-1 text-white flex items-center justify-center h-full w-full pointer-events-none'>
     <h1 className='text-3xl font-bold'>Your Content Goes Here</h1>
@@ -65,6 +94,10 @@ const InteractiveDotsBGInfo = () => {
 </div>`)} className="h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]">
             Copy
           </button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

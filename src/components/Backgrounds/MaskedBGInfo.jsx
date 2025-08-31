@@ -2,6 +2,7 @@ import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { MaskedBG } from 'wavyjs'
+import PropsTable from '../PropTable'
 
 const MaskedBGInfo = () => {
   const handleCopy = (text) => {
@@ -58,6 +59,7 @@ const MaskedBGInfo = () => {
             Copy
           </button>
         </div>
+        
       </div>
     </div>
   )

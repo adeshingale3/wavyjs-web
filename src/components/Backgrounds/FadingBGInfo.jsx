@@ -57,6 +57,10 @@ const FadingBGInfo = () => {
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
+        {/* <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
+        </div> */}
       </div>
     </div>
   )

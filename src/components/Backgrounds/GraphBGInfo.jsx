@@ -2,8 +2,37 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { GraphPaperBackground } from 'wavyjs'
+import PropsTable from '../PropTable'
 
 const GraphBGInfo = () => {
+  const propsData = [
+  { 
+    name: "gridSize", 
+    type: "number", 
+    description: "Size of each grid cell in pixels." 
+  },
+  { 
+    name: "strokeWidth", 
+    type: "number", 
+    description: "Width of the grid lines in pixels." 
+  },
+  { 
+    name: "strokeColor", 
+    type: "string", 
+    description: "Color of the grid lines." 
+  },
+  { 
+    name: "backgroundColor", 
+    type: "string", 
+    description: "Background color behind the grid." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Additional CSS or Tailwind classes for styling." 
+  },
+];
+
   const divRef = useRef(null)
 
   const handleCopy = (text) => {
@@ -73,6 +102,10 @@ const GraphBGInfo = () => {
 </div>`)} className="h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]">
             Copy
           </button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

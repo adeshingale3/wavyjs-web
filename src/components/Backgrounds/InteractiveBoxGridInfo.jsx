@@ -2,9 +2,44 @@ import React, { useRef } from 'react'
 import { InteractiveBoxGrid } from 'wavyjs'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import PropsTable from '../PropTable';
 
 
 const InteractiveBoxGridInfo = () => {
+    const propsData = [
+  {
+    name: "boxSize",
+    type: "number",
+    description: "Size of each box in pixels."
+  },
+  {
+    name: "spacing",
+    type: "number",
+    description: "Distance between adjacent boxes."
+  },
+  {
+    name: "maxDistance",
+    type: "number",
+    description: "Maximum distance at which the cursor influences box movement."
+  },
+  {
+    name: "moveStrength",
+    type: "number",
+    description: "Strength of the box movement in response to cursor (0–1 range)."
+  },
+  {
+    name: "className",
+    type: "string",
+    description: "Additional CSS or Tailwind classes for styling."
+  },
+  {
+    name: "boxColor",
+    type: "string",
+    description: "Fill or stroke color of the boxes."
+  }
+];
+
+
     const divRef = useRef(null);
 
     const handleCopy = () => {
@@ -74,7 +109,10 @@ const InteractiveBoxGridInfo = () => {
                 </div>
 
 
-
+            <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
+        </div>
             </div>
 
 

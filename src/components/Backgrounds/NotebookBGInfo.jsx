@@ -2,8 +2,47 @@ import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { NotebookBackground } from 'wavyjs'
+import PropsTable from '../PropTable'
 
 const NotebookBGInfo = () => {
+  const propsData = [
+  {
+    name: "lineSpacing",
+    type: "number",
+    description: "Vertical spacing between horizontal lines in pixels."
+  },
+  {
+    name: "lineColor",
+    type: "string",
+    description: "Color of the horizontal lines."
+  },
+  {
+    name: "lineWidth",
+    type: "number",
+    description: "Thickness of the horizontal lines in pixels."
+  },
+  {
+    name: "marginLineColor",
+    type: "string",
+    description: "Color of the vertical margin line."
+  },
+  {
+    name: "marginWidth",
+    type: "number",
+    description: "Thickness of the vertical margin line in pixels."
+  },
+  {
+    name: "showMargin",
+    type: "boolean",
+    description: "Whether to display the vertical margin line."
+  },
+  {
+    name: "className",
+    type: "string",
+    description: "Additional CSS or Tailwind classes for styling."
+  }
+];
+
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text)
       .then(() => alert("Copied to clipboard!"))
@@ -54,7 +93,7 @@ const NotebookBGInfo = () => {
         </div>
 
         <div className="flex flex-row justify-between p-4 bg-white/10 rounded-lg mt-4">
-          <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines>
+          <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines customStyle={{overflowX: "hidden"}}>
 {`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">
   <NotebookBackground />
   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-black">
@@ -65,6 +104,10 @@ const NotebookBGInfo = () => {
           <button onClick={() => handleCopy(`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">\n  <NotebookBackground />\n  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-black">\n    Your Content Goes Here\n  </div>\n</div>`)} className="h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]">
             Copy
           </button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>
