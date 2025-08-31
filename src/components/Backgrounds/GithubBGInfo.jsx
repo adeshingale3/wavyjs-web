@@ -25,7 +25,7 @@ const GithubBGInfo = () => {
       {/* Preview */}
       <div className='h-[60vh] w-[70vw] sm:w-[75vw] md:w-[50vw] mt-10 py-5'>
         <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
-        <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40'>
+        <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40 flex items-center justify-center'>
           <GithubBG />
         </div>
       </div>
@@ -62,4 +62,4 @@ const GithubBGInfo = () => {
   )
 }
 
-export default GithubBG
+export default GithubBGInfo

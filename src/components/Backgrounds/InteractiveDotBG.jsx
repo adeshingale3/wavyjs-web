@@ -49,9 +49,15 @@ const InteractiveDotsBGInfo = () => {
       {/* Preview */}
       <div className="h-[60vh] w-[70vw] sm:w-[75vw] md:w-[50vw] mt-10 py-5">
         <h2 className="text-sm sm:text-sm md:text-xl underline">Preview</h2>
-        <div className="h-full w-full mt-5 rounded-lg border-1 border-white/40">
-          <InteractiveDotGrid />
-        </div>
+        <div className="h-full w-full mt-5 rounded-lg border-1 border-white/40 flex items-center justify-center">
+          {/* <InteractiveDotGrid /> */}
+        <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+            <InteractiveDotGrid />
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+              Your Content Goes Here
+            </div>
+          </div>
+</div>
       </div>
 
       {/* Installation */}
@@ -79,12 +85,12 @@ const InteractiveDotsBGInfo = () => {
 
         <div className="flex flex-row justify-between p-4 bg-white/10 rounded-lg mt-4">
           <SyntaxHighlighter language="jsx" style={vscDarkPlus} showLineNumbers wrapLongLines customStyle={{ overflowX: "hidden" }}>
-{`<div className='h-screen w-screen flex items-center justify-center'>
-  <div className='absolute z-1 text-white flex items-center justify-center h-full w-full pointer-events-none'>
-    <h1 className='text-3xl font-bold'>Your Content Goes Here</h1>
-  </div>
-  <InteractiveDotGrid />
-</div>`}
+{`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+    <InteractiveDotGrid />
+    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+      Your Content Goes Here
+    </div>
+  </div>`}
           </SyntaxHighlighter>
           <button onClick={() => handleCopy(`<div className='h-screen w-screen flex items-center justify-center'>
   <div className='absolute z-1 text-white flex items-center justify-center h-full w-full pointer-events-none'>
