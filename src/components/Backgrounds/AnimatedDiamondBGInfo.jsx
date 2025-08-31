@@ -2,8 +2,32 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedDIamond } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedDiamondBGInfo = () => {
+  const propsData = [
+  { 
+    name: "diamondSize", 
+    type: "number", 
+    description: "Specifies the size (width/height) of each diamond shape in pixels." 
+  },
+  { 
+    name: "diamondSpacing", 
+    type: "number", 
+    description: "Controls the distance (gap) between each diamond in the grid." 
+  },
+  { 
+    name: "rotationSpeed", 
+    type: "number", 
+    description: "Determines how fast each diamond rotates per animation frame." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes for additional styling of the canvas element." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -71,6 +95,10 @@ const AnimatedDiamondBGInfo = () => {
             </SyntaxHighlighter>
           </div>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

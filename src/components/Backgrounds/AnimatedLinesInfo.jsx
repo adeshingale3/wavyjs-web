@@ -2,8 +2,32 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedLine } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedLinesBGInfo = () => {
+  const propsData = [
+  { 
+    name: "lineCount", 
+    type: "number", 
+    description: "Number of animated lines to render on the background." 
+  },
+  { 
+    name: "lineSpeed", 
+    type: "number", 
+    description: "Controls the speed of line movement across the canvas or background." 
+  },
+  { 
+    name: "lineLength", 
+    type: "number", 
+    description: "Base length of each line in pixels. Actual rendered length may vary slightly during animation." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes for custom styling and layout adjustments." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -82,6 +106,10 @@ const AnimatedLinesBGInfo = () => {
 </div>`}
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

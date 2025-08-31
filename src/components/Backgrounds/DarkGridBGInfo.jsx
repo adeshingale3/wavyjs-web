@@ -2,8 +2,42 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { DarkGridBackground } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const DarkGridBGInfo = () => {
+  const propsData = [
+  { 
+    name: "gridSize", 
+    type: "number", 
+    description: "Size of each grid cell in pixels. Default is 40." 
+  },
+  { 
+    name: "gridColor", 
+    type: "string", 
+    description: "Color of the grid lines. Default is 'rgba(64, 64, 64, 0.5)'." 
+  },
+  { 
+    name: "backgroundColor", 
+    type: "string", 
+    description: "Background color of the grid. Default is '#000000'." 
+  },
+  { 
+    name: "lineWidth", 
+    type: "number", 
+    description: "Width of the grid lines in pixels. Default is 1." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Additional Tailwind or CSS classes for custom styling." 
+  },
+  { 
+    name: "style", 
+    type: "React.CSSProperties", 
+    description: "Inline styles for fine-grained customization." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -56,6 +90,10 @@ const DarkGridBGInfo = () => {
 </div>`}
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

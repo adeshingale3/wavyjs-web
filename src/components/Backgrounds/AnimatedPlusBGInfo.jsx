@@ -2,8 +2,37 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedPlus } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedPlusBGInfo = () => {
+  const propsData = [
+  { 
+    name: "plusSize", 
+    type: "number", 
+    description: "Size of each plus/star shape in pixels." 
+  },
+  { 
+    name: "spacing", 
+    type: "number", 
+    description: "Distance between each shape in the grid layout." 
+  },
+  { 
+    name: "rotationSpeed", 
+    type: "number", 
+    description: "Speed of rotation or twinkle animation applied to each shape." 
+  },
+  { 
+    name: "colors", 
+    type: "string[]", 
+    description: "Array of colors used to render the shapes. Recommended 2–5 for best visuals." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes for styling and layout customization." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -82,6 +111,10 @@ const AnimatedPlusBGInfo = () => {
 </div>`}
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

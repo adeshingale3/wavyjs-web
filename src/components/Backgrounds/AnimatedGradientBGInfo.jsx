@@ -2,8 +2,47 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedGradient } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedGradientBGInfo = () => {
+  const propsData = [
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes for custom styling and layout adjustments." 
+  },
+  { 
+    name: "colors", 
+    type: "string[]", 
+    description: "Array of gradient colors (recommended 2–5) used to generate the animation." 
+  },
+  { 
+    name: "angle", 
+    type: "number", 
+    description: "The gradient angle in degrees, applied for linear or conic variants. Default is 45°." 
+  },
+  { 
+    name: "duration", 
+    type: "number", 
+    description: "The time in seconds for one full gradient animation cycle. Default is 14." 
+  },
+  { 
+    name: "opacity", 
+    type: "number", 
+    description: "Adjusts the overall transparency of the gradient layer. Default is 1 (fully opaque)." 
+  },
+  { 
+    name: "variant", 
+    type: `"linear" | "radial" | "conic"`, 
+    description: "Specifies the gradient type: linear, radial, or conic." 
+  },
+  { 
+    name: "baseColor", 
+    type: "string", 
+    description: "Optional solid background color beneath the gradient for better contrast or fallback." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -71,6 +110,10 @@ const AnimatedGradientBGInfo = () => {
             </SyntaxHighlighter>
           </div>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

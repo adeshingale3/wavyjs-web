@@ -2,8 +2,47 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { BlurredShapesBackground } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const ColourfulBGInfo = () => {
+  const propsData = [
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes to apply custom styling." 
+  },
+  { 
+    name: "colors", 
+    type: "string[]", 
+    description: "Array of colors used for the shapes. Recommended 2–5 colors." 
+  },
+  { 
+    name: "shapeCount", 
+    type: "number", 
+    description: "Total number of shapes to be rendered on the background." 
+  },
+  { 
+    name: "animate", 
+    type: "boolean", 
+    description: "Controls whether the shapes should animate (true) or remain static (false)." 
+  },
+  { 
+    name: "blur", 
+    type: "number", 
+    description: "Applies a blur effect (in pixels) to the shapes for a soft, diffused look." 
+  },
+  { 
+    name: "opacity", 
+    type: "number", 
+    description: "Adjusts the overall transparency of shapes. Range: 0 (invisible) to 1 (fully visible)." 
+  },
+  { 
+    name: "backgroundColor", 
+    type: "string", 
+    description: "Background color of the canvas or container behind the shapes." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -56,6 +95,10 @@ const ColourfulBGInfo = () => {
 </div>`}
           </SyntaxHighlighter>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 px-2 py-1 rounded-full cursor-pointer text-[12px]'>Copy</button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>

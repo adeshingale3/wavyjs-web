@@ -2,8 +2,42 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedChevron } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedChevronBGInfo = () => {
+  const propsData = [
+  { 
+    name: "chevronSize", 
+    type: "number", 
+    description: "Specifies the size (width/height) of each chevron shape in pixels." 
+  },
+  { 
+    name: "spacing", 
+    type: "number", 
+    description: "Controls the distance (gap) between each chevron in the grid layout." 
+  },
+  { 
+    name: "strokeWidth", 
+    type: "number", 
+    description: "Sets the line thickness of the chevron strokes." 
+  },
+  { 
+    name: "colors", 
+    type: "string[]", 
+    description: "An array of colors used to randomly color the chevrons." 
+  },
+  { 
+    name: "rotationSpeed", 
+    type: "number", 
+    description: "Determines how fast each chevron rotates per animation frame." 
+  },
+  { 
+    name: "className", 
+    type: "string", 
+    description: "Optional Tailwind CSS classes for custom styling of the canvas element." 
+  },
+];
+
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -107,6 +141,10 @@ const AnimatedChevronBGInfo = () => {
           >
             Copy
           </button>
+        </div>
+        <div className="p-4">
+                  <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
         </div>
       </div>
     </div>
