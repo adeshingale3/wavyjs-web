@@ -74,7 +74,7 @@ Wavy is totally free for commercial use and personal use.
 
 ## Credits
 
-Thank you to all the people who contributed to Lucide!
+Thank you to all the people who contributed to WavyJS!
 
 <a href="https://github.com/adeshingale3/wavyjs-web/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=adeshingale3/wavyjs-web" />
