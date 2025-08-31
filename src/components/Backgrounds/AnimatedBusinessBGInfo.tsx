@@ -2,8 +2,18 @@ import React, { useRef } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { AnimatedBusiness } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const AnimatedBusinessBGInfo = () => {
+  const propsData = [
+    { name: "primaryColor", type: "string", description: "Size of the shapes." },
+    { name: "secondaryColor", type: "string", description: "Color of the shapes." },
+     { name: "backgroundColor", type: "string", description: "Background Color of the page" },
+      { name: "particleCount", type: "integer", description: "Count of particles" },
+       { name: "speed", type: "number", description: "Speed of icons." },
+        { name: "opacity", type: "number", description: "Opacity of color" },
+    { name: "className", type: "string", description: "Extra Tailwind classes." },
+  ];
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -110,6 +120,12 @@ const AnimatedBusinessBGInfo = () => {
             Copy
           </button>
         </div>
+
+
+        <div className="p-4">
+      <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+      <PropsTable data={propsData} />
+    </div>
       </div>
     </div>
   )
