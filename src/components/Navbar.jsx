@@ -41,7 +41,7 @@ const Navbar = () => {
         >
           <img
             src="/wavy logo.png"
-            className="w-26 sm:w-22 md:w-18 lg:w-14 " // Adjust sizes for different screens
+            className="w-26 sm:w-22 md:w-18 lg:w-14 scale-100 sm:scale-100 md:scale-120 lg:scale-130" // Adjust sizes for different screens
             alt="Logo"
           />
         </Link>
