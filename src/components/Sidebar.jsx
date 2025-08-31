@@ -12,11 +12,15 @@ const Sidebar = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   const isNew = (name) => {
-    const added = newComponents[name];
-    if (!added) return false;
-    const diffDays = (Date.now() - added) / (1000 * 60 * 60 * 24);
-    return diffDays <= 6;
-  };
+  const addedDate = newComponents[name];
+  if (!addedDate) return false;
+
+  const addedTime = new Date(addedDate).getTime();
+  const now = Date.now();
+  const diffDays = (now - addedTime) / (1000 * 60 * 60 * 24);
+
+  return diffDays <= 6; // show "New" for 6 days
+};
 
   const tabs = [
     { title: "Get Started", subtabs: ["Introduction", "Installation", "MonoRepo"] },
@@ -39,7 +43,7 @@ const Sidebar = () => {
       {/* Sidebar */}
       <div
         className={`
-          fixed top-0 left-0 h-full w-[70%] sm:w-[70%] md:w-[15vw]
+          fixed top-0 left-0 h-full w-[90%] sm:w-[90%] md:w-[20vw]
           text-white p-5 overflow-auto scrollbar-hidden bg-black
           transform transition-transform duration-300 ease-in-out z-50
           ${isOpen ? "translate-x-0" : "translate-x-100"}
