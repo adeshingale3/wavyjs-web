@@ -1,7 +1,13 @@
 import React, { useRef } from 'react'
-import { CssCardIcon} from 'wavyjs'
+import { CssCardIcon } from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const CssCardIconInfo = () => {
+  const propsData = [
+    { name: "size", type: "number", description: "Size of the icon." },
+    { name: "color", type: "string", description: "Color of the icon." },
+    { name: "className", type: "string", description: "Extra Tailwind classes." },
+  ];
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -21,10 +27,10 @@ const CssCardIconInfo = () => {
       <h1 className='text-[28px] sm:text-[36px] md:text-[40px] font-bold'>CSS Card Icon</h1>
       <h4 className='text-gray-500 text-[10px] sm:text-[10px] md:text-[15px]'>An animated CSS Card Icon to elevate your portfolio or website.</h4>
       <div className='h-[60vh] w-[70vw] sm:w-[75vw] md:w-[50vw] mt-10 py-5'>
-          <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
-          <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40 flex items-center justify-center'>
-              <CssCardIcon size={300}/>
-          </div>
+        <h2 className='text-sm sm:text-sm md:text-xl underline'>Preview</h2>
+        <div className='h-full w-full mt-5 rounded-lg border-1 border-white/40 flex items-center justify-center'>
+          <CssCardIcon size={300} />
+        </div>
       </div>
 
       <div className='w-[50vw] h-auto flex flex-col mt-20'>
@@ -38,25 +44,28 @@ const CssCardIconInfo = () => {
         <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
           <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
             {"import { CssCardIcon } from 'wavyjs'"}
-            </h1>
+          </h1>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
         <div className=' flex flex-row justify-between p-4 bg-white/10 rounded-lg h-auto w-[70vw] sm:w-[75vw] md:w-[50vw] mt-4' >
           <h1 className='text-sm sm:text-sm md:text-[16px]' ref={divRef}>
-            {"<div>"}<br/>
-                    {"<CssCardIcon size={300}/>"}<br/>
-          {"</div>"}
-            </h1>
+            {"<div>"}<br />
+            {"<CssCardIcon size={300}/>"}<br />
+            {"</div>"}
+          </h1>
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
+        <div>
+          <h2 className="text-lg font-semibold text-white mt-10">Props</h2>
+          <PropsTable data={propsData} />
+        </div>
 
-        
 
       </div>
-        
-    
-      
-    
+
+
+
+
     </div>
   )
 }

@@ -1,7 +1,13 @@
 import React, { useRef } from 'react'
 import { HtmlIcon} from 'wavyjs'
+import PropsTable from '../PropTable';
 
 const HtmlIconInfo = () => {
+  const propsData = [
+    { name: "size", type: "number", description: "Size of the icon." },
+    { name: "color", type: "string", description: "Color of the icon." },
+    { name: "className", type: "string", description: "Extra Tailwind classes." },
+  ];
   const divRef = useRef(null);
 
   const handleCopy = () => {
@@ -50,7 +56,10 @@ const HtmlIconInfo = () => {
           <button onClick={handleCopy} className='h-5 text-white bg-white/30 right-0 px-2 py-1 flex items-center rounded-full cursor-pointer text-[12px]'>Copy</button>
         </div>
 
-        
+        <div>
+          <h2 className="text-lg font-semibold text-white mt-10">Props</h2>
+          <PropsTable data={propsData} />
+        </div>
 
       </div>
         
