@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { tabRoutes } from "../screens/Components";
+import { newComponents } from "../JSONinfo/newComponent";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,12 +11,18 @@ const Sidebar = () => {
   const toggleTab = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  const isNew = (name) => {
+    const added = newComponents[name];
+    if (!added) return false;
+    const diffDays = (Date.now() - added) / (1000 * 60 * 60 * 24);
+    return diffDays <= 6;
+  };
 
   const tabs = [
     { title: "Get Started", subtabs: ["Introduction", "Installation", "MonoRepo"] },
     { title: "Icons", subtabs: ["React", "JavaScript", "Java", "Tailwind", "Python", "HTML", "CSS", "Github", "Flutter", "Dart"] },
     { title: "Card Icons", subtabs: ["ReactCard", "JavaScriptCard", "JavaCard", "PythonCard", "TailwindCard", "HtmlCard", "CssCard", "FlutterCard", "GithubCard", "DartCard"] },
-    { title: "Backgrounds", subtabs: ["InteractiveDotsBG", "InteractiveBoxGridBG", "AnimatedDiamondBG","AnimatedChevronBG", "AnimatedStar","AnimatedPlus", "AnimatedBusinessBG","AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG","AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
+    { title: "Backgrounds", subtabs: ["InteractiveDotsBG", "InteractiveBoxGridBG", "AnimatedDiamondBG", "AnimatedChevronBG", "AnimatedStar", "AnimatedPlus", "AnimatedBusinessBG", "AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG", "AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
     { title: "Hooks", subtabs: ["useHover"] }, // add more hooks here
   ];
 
@@ -61,6 +68,11 @@ const Sidebar = () => {
                     className="text-sm text-white/70 cursor-pointer hover:text-white transition-colors duration-200"
                   >
                     {subtab}
+                    {isNew(subtab) && (
+                      <span className="ml-2 text-xs border-1 border-white/20 text-blue-500 px-2 py-0.5 rounded-full">
+                        New
+                      </span>
+                    )}
                   </Link>
                 ))}
               </div>
