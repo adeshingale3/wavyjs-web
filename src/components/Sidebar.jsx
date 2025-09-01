@@ -24,9 +24,10 @@ const Sidebar = () => {
 
   const tabs = [
     { title: "Get Started", subtabs: ["Introduction", "Installation", "MonoRepo"] },
+        { title: "Backgrounds", subtabs: ["InteractiveDotsBG","AnimatedGraph", "InteractiveBoxGridBG", "AnimatedDiamondBG", "AnimatedChevronBG", "AnimatedStar", "AnimatedPlus", "AnimatedBusinessBG", "AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG", "AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
+
     { title: "Icons", subtabs: ["React", "JavaScript", "Java", "Tailwind", "Python", "HTML", "CSS", "Github", "Flutter", "Dart"] },
     { title: "Card Icons", subtabs: ["ReactCard", "JavaScriptCard", "JavaCard", "PythonCard", "TailwindCard", "HtmlCard", "CssCard", "FlutterCard", "GithubCard", "DartCard"] },
-    { title: "Backgrounds", subtabs: ["InteractiveDotsBG", "InteractiveBoxGridBG", "AnimatedDiamondBG", "AnimatedChevronBG", "AnimatedStar", "AnimatedPlus", "AnimatedBusinessBG", "AnimatedGradientBG", "GraphBG", "NotebookBG", "DarkGridBG", "AnimatedLineBG", "FadingBG", "AnimatedBG", "MaskedBG", "GithubBG", "NameScrollerBG"] },
     { title: "Hooks", subtabs: ["useHover"] }, // add more hooks here
   ];
 

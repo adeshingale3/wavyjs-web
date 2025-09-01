@@ -49,6 +49,7 @@ import AnimatedBusinessBGInfo from '../components/Backgrounds/AnimatedBusinessBG
 import AnimatedGradientBGInfo from '../components/Backgrounds/AnimatedGradientBGInfo';
 import AnimatedStarBGInfo from '../components/Backgrounds/AnimatedStarBGInfo';
 import AnimatedPlusBGInfo from '../components/Backgrounds/AnimatedPlusBGInfo';
+import AnimatedGraphBGInfo from '../components/Backgrounds/AnimatedGraphBGInfo';
 
 // Exported so Sidebar can use it
 export const tabRoutes = {
@@ -67,6 +68,7 @@ export const tabRoutes = {
    AnimatedGradientBG: {path: "animated-gradient-bg" , component: <AnimatedGradientBGInfo />},
    AnimatedStar: {path: "animated-star" , component: <AnimatedStarBGInfo />},
    AnimatedPlus : {path: "animted-plus", component: <AnimatedPlusBGInfo />},
+   AnimatedGraph : {path: "animated-graph", component: <AnimatedGraphBGInfo/>},
   // BlurredBG:{path:"blurred-bg", component: <ColourfulBGInfo />},
   DarkGridBG: {path: "dark-grid-bg", component: <DarkGridBGInfo />},
   FadingBG: { path: "fading-bg", component: <FadingBGInfo /> },
@@ -115,7 +117,7 @@ const Components = () => {
   return (
   <div className="h-screen w-screen overflow-auto bg-black p-5 scrollbar-hidden">
     {/* Top bar */}
-    <div className="nav w-[80%] h-20 relative z-10 flex flex-row items-center">
+    <div className="nav w-[80%] h-10 relative z-10 flex flex-row items-center">
       <Link
         to="/"
         className="h-full w-[20%] sm:w-[15%] md:w-[10%] lg:w-[5%] absolute flex items-center justify-center "

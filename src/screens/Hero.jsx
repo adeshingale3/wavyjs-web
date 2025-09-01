@@ -23,10 +23,6 @@ const Hero = () => {
             ease: "power3.out",
             stagger: 0.2,
         });
-
-
-
-
     }, []);
     useGSAP(() => {
         const screenWidth = window.innerWidth;

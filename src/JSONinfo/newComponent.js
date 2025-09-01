@@ -1,5 +1,6 @@
 // newComponents.js
 export const newComponents = {
+  AnimatedGraph: "2025-09-01",
     InteractiveDotsBG: "2025-08-26",
     InteractiveBoxGridBG: "2025-08-26",
     AnimatedDiamondBG: "2025-08-26",

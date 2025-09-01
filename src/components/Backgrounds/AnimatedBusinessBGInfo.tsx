@@ -8,10 +8,10 @@ const AnimatedBusinessBGInfo = () => {
   const propsData = [
     { name: "primaryColor", type: "string", description: "Size of the shapes." },
     { name: "secondaryColor", type: "string", description: "Color of the shapes." },
-     { name: "backgroundColor", type: "string", description: "Background Color of the page" },
-      { name: "particleCount", type: "integer", description: "Count of particles" },
-       { name: "speed", type: "number", description: "Speed of icons." },
-        { name: "opacity", type: "number", description: "Opacity of color" },
+    { name: "backgroundColor", type: "string", description: "Background Color of the page" },
+    { name: "particleCount", type: "integer", description: "Count of particles" },
+    { name: "speed", type: "number", description: "Speed of icons." },
+    { name: "opacity", type: "number", description: "Opacity of color" },
     { name: "className", type: "string", description: "Extra Tailwind classes." },
   ];
   const divRef = useRef(null);
@@ -105,7 +105,7 @@ const AnimatedBusinessBGInfo = () => {
               wrapLongLines
               customStyle={{ overflowX: "hidden" }}
             >
-{`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+              {`<div className="relative w-full h-full overflow-hidden flex items-center justify-center">
   <AnimatedBusiness />
   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
     Your Content Goes Here
@@ -123,9 +123,9 @@ const AnimatedBusinessBGInfo = () => {
 
 
         <div className="p-4">
-      <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
-      <PropsTable data={propsData} />
-    </div>
+          <h2 className="text-lg font-semibold text-white mb-3">Props</h2>
+          <PropsTable data={propsData} />
+        </div>
       </div>
     </div>
   )

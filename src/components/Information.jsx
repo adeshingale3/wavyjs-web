@@ -17,9 +17,10 @@ const Information = () => {
   { name: "AnimatedBG", path: "animated-bg" },
   { name: "MaskedBG", path: "masked-bg" },
   { name: "GithubBG", path: "github-bg" },
-  { name: "NameScrollerBG", path: "name-scroller" },
+  // { name: "NameScrollerBG", path: "name-scroller" },
   { name: "AnimatedStar", path: "animated-star" },
   { name: "AnimatedPlus", path: "animted-plus" }, // typo kept same as your old code
+  { name: "AnimatedGraph", path: "animated-graph" },
 ];
 
 const Hooks = [
